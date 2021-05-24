@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import { ReactComponent as Completed } from '../../tasksImages/completed.svg';
-import { ReactComponent as Incompleted } from '../../tasksImages/incompleted.svg'
+import { ReactComponent as Completed } from '../../icons/completed.svg';
+import { ReactComponent as Incompleted } from '../../icons/incompleted.svg'
 
 const TaskCard = (title, reward, imageUrl, date, isCompleted, toggleCompleted) => {
 
