@@ -5,6 +5,7 @@ import {Provider} from 'react-redux';
 import App from './App';
 import store from './redux/store';
 
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -13,6 +14,5 @@ ReactDOM.render(
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
-);
-
+  document.getElementById("root")
+)
