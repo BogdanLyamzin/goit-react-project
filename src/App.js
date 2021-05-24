@@ -3,9 +3,8 @@ import Modal from './shared/components/Modal';
 function App() {
   return (
     <>
-    <Modal />
+      <Modal />
     </>
   );
 }
-
-export default App;
+  export default App;
