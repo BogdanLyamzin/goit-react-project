@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types'
 import { v4 } from 'uuid';
 
 
-const FormField = ({ label, className , ...inputProps}) => {
+const FormInput = ({ label, className , ...inputProps}) => {
     const id = v4();
     return (
         <div>
@@ -10,4 +11,23 @@ const FormField = ({ label, className , ...inputProps}) => {
         </div>
     )
 }
-export default FormField;
+export default FormInput;
+
+
+FormInput.defaultProps = {
+    required: false,
+    placeholder: '',
+    className: '',
+    value: '',
+    type: 'text',
+    name: '',
+    onChange: () => { }
+}
+
+FormInput.propTypes = {
+    placeholder: PropTypes.string,
+    name: PropTypes.string,
+    value: PropTypes.string,
+    className: PropTypes.string,
+    onChange: PropTypes.func,
+}

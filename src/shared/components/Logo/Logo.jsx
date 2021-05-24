@@ -9,7 +9,6 @@ const Logo = () => {
             <Logo />
         </Link>
             
-
     )
 }
 

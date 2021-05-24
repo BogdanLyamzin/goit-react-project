@@ -17,7 +17,7 @@ Button.defaultProps = {
 
 
 Button.propTypes = {
-    type: PropTypes.string,
+    type: PropTypes.oneOf(['button', 'submit', 'reset']),
     onClick: PropTypes.func,
     className: PropTypes.string,
 }
