@@ -24,3 +24,4 @@ export const logIn = body => async dispatch => {
         dispatch(actions.loginError(error))
     }
 };
+

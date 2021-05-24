@@ -1,24 +1,24 @@
 import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
 
-import Button from '../../../shared/components/Button';
-import FormInput from '../../../shared/components/FormInput';
+import Button from '../../../../shared/components/Button';
+import FormInput from '../../../../shared/components/FormInput';
 import { fields } from './fields';
 import { initialState } from './initialState';
-import useForm from '../../../shared/hooks/useForm';
-import AuthOperations from '../../../redux/auth/auth-operations'
+import useForm from '../../../../shared/hooks/useForm';
+import { register, logIn } from '../../../../redux/auth/auth-operations';
 
 import s from './LoginForm.module.scss'
 
 
-const LoginForm = () => {
+export const LoginForm = () => {
 
     const [actionType, setActionType] = useState("");
 
     const dispatch = useDispatch();
     
     const onSubmit = data => {
-        const action = (actionType === "login") ? AuthOperations.logIn(data) : AuthOperations.register(data)
+        const action = (actionType === "login") ? logIn(data) : register(data)
         dispatch(action)
 
   };
