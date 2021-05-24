@@ -1,12 +1,26 @@
 import React from 'react';
 
-import Button from '../../../shared/components/Button';
-import FormInput from '../../../shared/components/FormInput';
+import LoginForm from '../../client/LoginForm';
+
+import s from './AuthPage.module.scss'
 
 const AuthPage = () => {
 
 
-    return
+    return (
+        <>
+            <section>
+                <div>
+                    <div className={s.leftSide}></div>
+                </div>
+
+                <div>
+                    <h1>Выполняй задания, получи классные призы!</h1>
+                    <LoginForm />
+                </div>
+            </section>
+        </>
+    )
 }
 
 export default AuthPage;
