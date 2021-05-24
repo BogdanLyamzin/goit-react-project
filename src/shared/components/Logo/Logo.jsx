@@ -5,7 +5,7 @@ const Logo = () => {
     return (
     
         <Link to='/'>
-            <h1>KidsLike</h1>
+            <span>KidsLike</span>
             <Logo />
         </Link>
             

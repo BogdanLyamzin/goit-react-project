@@ -1,16 +1,34 @@
+import PropTypes from 'prop-types'
+
 import { v4 } from 'uuid';
 
 
-const FormCheckbox = ({ label, className, onChange = () => null}) => {
+import styles from './FormRadio.module.sass'
+
+const FormRadio = ({ label, className, ...props}) => {
     const id = v4();
 
     return (
         <div>
             {label && <label htmlFor={id}>{label}</label>}
-            <input id={id} className={`${className}`} type="radio" onChange={onChange }/>
+            <input id={id} className={`${styles.radioInput} ${className}`} type="radio" {...props}/>
         </div>
             )
 	
 }
  
-export default FormCheckbox
+export default FormRadio
+
+
+FormRadio.defaultProps = {
+    checked: false,
+    className: '',
+    onChange: () => { }
+}
+
+
+FormRadio.propTypes = {
+    onClick: PropTypes.func,
+    className: PropTypes.string,
+    checked: PropTypes.bool
+}
