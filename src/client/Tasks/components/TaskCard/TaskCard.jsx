@@ -16,7 +16,6 @@ const TaskCard = (title, reward, imageUrl, date, isCompleted, toggleCompleted) =
                 <div>
                     <label htmlFor="task"></label>
                     <input id="task" type="checkbox" onClick={toggleCompleted} name="task">
-
                     </input>
                 </div>}
             {today > date && isCompleted && <Completed />}
