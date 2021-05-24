@@ -1,8 +1,19 @@
-import test from "./test.json";
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-console.log(test)
+import Routes from './routes'
+import Navbar from './client/Navba/Navbar';
+import Footer from './Footer/Footer';
+
+
 function App() {
-  return <></>
-}
+  return (
+    <Router>
+      <Navbar />
+      <Routes />
+      <Footer />
+    </Router>
+  );
+};
 
 export default App
