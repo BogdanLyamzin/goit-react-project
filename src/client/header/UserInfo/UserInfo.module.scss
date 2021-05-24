@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700");
+
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.userAvatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.userName {
+  margin-left: 10px;
+  padding-right: 15px;
+  font-family: 'Montserrat' , sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  border-right: 1px solid #858598;
+  color: white;
+line-height: 1.25px;
+  @media screen and (min-width: 768px) {
+    color: #858598;
+  }
+}
+
+.btnLogout {
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+    & .logoutSvg {
+        padding-left: 15px;
+        fill: white;
+        @media screen and (min-width: 768px) {
+          fill: #858598;
+        }
+  }
+}
