@@ -2,11 +2,7 @@ import test from "./test.json";
 
 console.log(test)
 function App() {
-  return (
-    <>
-
-    </>
-  );
+  return <></>
 }
 
-export default App;
+export default App
