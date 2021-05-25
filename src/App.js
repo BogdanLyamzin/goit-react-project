@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 58c4ce594db9e3d232059b09b40fc2cf59611077
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AwardsCard from './client/awards/components/AwardsCard';
@@ -17,6 +21,10 @@ function App() {
     </Router>
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 58c4ce594db9e3d232059b09b40fc2cf59611077
 
 
 export default App;
