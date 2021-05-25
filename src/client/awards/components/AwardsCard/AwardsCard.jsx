@@ -1,6 +1,7 @@
 import React from 'react';
 import { ReactComponent as Gift } from '../../../../images/Gift.svg';
-// import Button from '../../../../shared/components/Button';
+import Button from '../../../../shared/components/Button';
+import CheckboxToggle from '../../../../shared/components/CheckboxToggle';
 import styles from './AwardsCard.module.scss';
 
 const AwardsCard = () => {
@@ -15,7 +16,7 @@ const AwardsCard = () => {
                 <div className={styles.rating}>
                     <p className={styles.text}>Заработано баллов за эту неделю: <span className={styles.number_bold}>8</span></p>
                     <p className={styles.text}>Запланированно баллов на эту неделю: <span className={styles.number_bold}>16</span></p>
-                    <span className={styles.number_bold}>8 <span className={styles.number}>/ 16</span></span> 
+                    <span className={styles.number_rate}>8 <span className={styles.number}>/ 16</span></span> 
                     <progress className={styles.rate_line} value='0' max='100'></progress>
                 </div>
             </div>
@@ -26,8 +27,9 @@ const AwardsCard = () => {
                     <div className={styles.container_card}>
                         <div className={styles.container_info}>
                         <h3 className={styles.gift_name}>Сладости</h3>
-                            <span className={styles.price}>20 баллов</span>
-                            </div>
+                                <span className={styles.price}>20 баллов</span>
+                        </div>
+                        <div className={styles.container_checkboxtoggle}> <CheckboxToggle className={styles.checkbox_toggle}/></div> 
                     </div>
                 </li>   
                   <li className={styles.item}>
@@ -35,8 +37,9 @@ const AwardsCard = () => {
                     <div className={styles.container_card}>
                         <div className={styles.container_info}>
                         <h3 className={styles.gift_name}>Сладости</h3>
-                            <span className={styles.price}>20 баллов</span>
-                            </div>
+                                <span className={styles.price}>20 баллов</span>
+                        </div>
+                        <div className={styles.container_checkboxtoggle}> <CheckboxToggle className={styles.checkbox_toggle}/></div> 
                     </div>
                 </li>  
                 <li className={styles.item}>
@@ -44,8 +47,9 @@ const AwardsCard = () => {
                     <div className={styles.container_card}>
                         <div className={styles.container_info}>
                         <h3 className={styles.gift_name}>Сладости</h3>
-                            <span className={styles.price}>20 баллов</span>
-                            </div>
+                                <span className={styles.price}>20 баллов</span>
+                        </div>
+                        <div className={styles.container_checkboxtoggle}> <CheckboxToggle className={styles.checkbox_toggle}/></div> 
                     </div>
                 </li>  
                   <li className={styles.item}>
@@ -53,12 +57,14 @@ const AwardsCard = () => {
                     <div className={styles.container_card}>
                         <div className={styles.container_info}>
                         <h3 className={styles.gift_name}>Сладости</h3>
-                            <span className={styles.price}>20 баллов</span>
-                            </div>
+                                <span className={styles.price}>20 баллов</span>
+                        </div>
+                        <div className={styles.container_checkboxtoggle}> <CheckboxToggle className={styles.checkbox_toggle}/></div> 
                     </div>
                 </li>  
             </ul>
-         </div>    
+            </div> 
+         <Button className={styles.button_confirm}> Подтвердить </Button>   
         </div>
 
     )
