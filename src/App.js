@@ -1,12 +1,19 @@
 import React from 'react';
-import AwardsCard from './client/awards/components/AwardsCard';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import Routes from './routes'
+import Navbar from './client/Navba/Navbar';
+import Footer from './Footer/Footer';
+
 
 function App() {
   return (
-    <>
-    <AwardsCard/>
-    </>
+    <Router>
+      <Navbar />
+      <Routes />
+      <Footer />
+    </Router>
   );
-}
+};
 
-export default App;
+export default App
