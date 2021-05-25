@@ -33,7 +33,7 @@ export const LoginForm = () => {
           autoComplete="off"
       >
         <p className={s.title}>Вы можете авторизоваться с помощью Google Account:</p>
-        <Button type="submit">Google</Button>
+        <Button type="submit" className={s.googleBtn}>Google</Button>
         <p className={s.title}>Или зайти с помощью e-mail и пароля, предварительно зарегистрировавшись:</p>
         <FormInput {...fields.email} value={data.email} onChange={handleChange} className={s.input}/>
         <FormInput {...fields.password} value={data.password} onChange={handleChange} className={s.input}/>

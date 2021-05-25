@@ -23,9 +23,8 @@
     flex-direction: column-reverse;
   }
   .containerFoto {
-    display: flex;
+    display: block;
     position: relative;
-    //   flex-direction: column-reverse;
   }
 
   .imgContainer {
@@ -56,9 +55,6 @@
   .wrapper {
     @include grid(590px, auto-fill);
   }
-  //   .containerFoto {
-  //     position: relative;
-  //   }
   .imgContainer {
     position: absolute;
     &:nth-child(2) {
