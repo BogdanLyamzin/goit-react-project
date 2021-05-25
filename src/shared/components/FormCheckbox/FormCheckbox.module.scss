@@ -1,6 +1,7 @@
 @import 'src/shared/styles/base';
 
 
+
 .checkbox{
   &InputHidden{
     position: absolute;
@@ -25,23 +26,39 @@
     border: 1px solid #ffff;
     border-radius: 2px;
     cursor: pointer;
+    margin-right: 10px;
     &::before {
-      width: 8px;
-      height: 6px;
-      margin: 3px 4px;
+      width: 10px;
+      height: 8px;
+      padding:3px 4px;
       display: inline-block;
       content: '';
       background-image: url(../../../images/check-mark.svg);
       background-repeat: no-repeat;
       background-position: center;
     }
-
   }
 
   &InputHidden:checked + &Input{
     background-color: #FFFFFF;
   }
 
+  &Text{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.21;
+    color: #FFFFFF;
+    text-transform: capitalize;
+  }
+}
+
+.formGroup{
+  @include flex(center, center);
+  flex-direction: row-reverse;
+  &:not(:last-child){
+  margin-bottom: 14px;
+  }
+  
 }
 
  
