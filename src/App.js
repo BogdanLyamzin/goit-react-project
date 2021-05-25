@@ -1,14 +1,16 @@
-import React  from 'react';
+import React from 'react';
 
 import AuthPage from './pages/AuthPage'
 
 
 function App() {
+
   return (
     <>
-              <AuthPage />
+      <AuthPage />
     </>
   );
+
 }
 
 export default App;
