@@ -6,20 +6,17 @@ import { ReactComponent as Incompleted } from '../../icons/incompleted.svg'
 const TaskCard = (title, reward, imageUrl, date, isCompleted, toggleCompleted) => {
 
     const today = new Date().toISOString().slice(0, 10);
+    const expiredDate = Date.parse(today) > Date.parse(date)
 
     return (
         <li>
             <img src={imageUrl} alt={title} />
             <h3>{title}</h3>
             <p>{reward} балла</p>
-            {today === date &&
-                <div>
-                    <label htmlFor="task"></label>
-                    <input id="task" type="checkbox" onClick={toggleCompleted} name="task">
-                    </input>
-                </div>}
-            {today > date && isCompleted && <Completed />}
-            {today > date && !isCompleted && <Incompleted />}
+            {today === date && <input onChange={toggleCompleted}></input> // input Марины и логика Дани//
+            }
+            {expiredDate && isCompleted && <Completed />}
+            {expiredDate && !isCompleted && <Incompleted />}
         </li>
     );
 }
