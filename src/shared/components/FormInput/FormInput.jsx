@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types'
 import { v4 } from 'uuid';
 
-import styles from './FormInput.module.sass'
+import styles from './FormInput.module.scss'
 
 
 const FormInput = ({ label, className , ...inputProps}) => {
     const id = v4();
     return (
-        <div>
-            {label && <label htmlFor={id}>{label}</label>}
+        <div className={styles.formGroup}>
+            {label && <label htmlFor={id} className={styles.label}>{label}</label>}
             <input id={id} className={`${styles.input} ${className}`} {...inputProps} />
         </div>
     )
