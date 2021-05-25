@@ -21,24 +21,18 @@ const Modal = ({ children, onClose }) => {
         [onClose]
     );
 
-    const handleClick = () => {
-        onClose();
-    };
-
     const handleBackdropClick = (e) => {
-        console.log(e);
         if (e.currentTarget === e.target) {
             onClose();
         }
     };
-
 
     const modalRoot = document.querySelector('#modal-root');
     return (
         createPortal(<div className={styles.backdrop} onClick={handleBackdropClick}>
             <div className={styles.modalLayout}>
                 <div className={styles.modalContent}>
-                    <CloseIcon className={styles.closeBtnIcon} onClick={handleClick}/>
+                    <CloseIcon className={styles.closeBtnIcon} onClick={onClose}/>
                     {children}
                 </div>
             </div>
