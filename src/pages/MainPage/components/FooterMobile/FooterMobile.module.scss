@@ -1,0 +1,76 @@
+.footerProgressContainer {
+	@media screen and (max-width: 767px) {
+		position: relative;
+		padding: 12px 20px 17px 20px;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1279px) {
+		display: none;
+	}
+
+	@media screen and (min-width: 1280px) {
+		display: none;
+	}
+}
+.progressBot {
+	@media screen and (max-width: 767px) {
+		display: flex;
+	}
+}
+.earnedPoints {
+	@media screen and (max-width: 767px) {
+		margin-bottom: 2px;
+
+		text-align: start;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 15px;
+
+		letter-spacing: 0.04em;
+
+		color: #a6abb9;
+	}
+}
+.progressText {
+	margin-right: 26px;
+
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+
+	letter-spacing: 0.2em;
+
+	color: #000000;
+	@media screen and (max-width: 1279px) {
+	}
+}
+.progressTextPoints {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 17px;
+
+	text-align: right;
+	letter-spacing: 0.2em;
+
+	color: #000000;
+	@media screen and (max-width: 1279px) {
+	}
+}
+
+.imageButton {
+	padding: 0;
+	border: none;
+	// font: inherit;
+	// color: inherit;
+	background-color: transparent;
+
+	cursor: pointer;
+	@media screen and (max-width: 767px) {
+		position: absolute;
+		top: -20px;
+		right: 20px;
+	}
+}

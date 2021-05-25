@@ -1,0 +1,44 @@
+.sidebar {
+	@media screen and (max-width: 1279px) {
+		display: none;
+	}
+	@media screen and (min-width: 1280px) {
+		display: block;
+
+		width: 240px;
+		background: #ffbc33;
+	}
+}
+.listDaysSidebar {
+	display: block;
+	padding: 148px 0px 318px 50px;
+
+	li {
+		padding: 12px 10px 13px 27px;
+		background: #ffffff;
+		opacity: 0.5;
+		border-radius: 6px 0px 0px 6px;
+		text-align: start;
+
+		&:not(:last-child) {
+			margin-bottom: 6px;
+		}
+
+		span {
+			font-style: normal;
+			font-weight: bold;
+			font-size: 14px;
+			line-height: 17px;
+
+			letter-spacing: 0.04em;
+
+			color: #000000;
+		}
+
+		&:hover,
+		&:focus {
+			opacity: 1;
+			cursor: pointer;
+		}
+	}
+}

@@ -1,0 +1,85 @@
+.progressDesktop {
+	@media screen and (min-width: 1280px) {
+		position: absolute;
+		right: 53px;
+		top: 40px;
+	}
+}
+
+.pointsContainer {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+	@media screen and (min-width: 768px) {
+		display: block;
+		margin-bottom: 16px;
+
+		p {
+			font-style: normal;
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 15px;
+
+			// text-align: center;
+			letter-spacing: 0.04em;
+
+			color: #a6abb9;
+
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+
+		span {
+			font-weight: bold;
+			color: #000000;
+		}
+	}
+	@media screen and (min-width: 1280px) {
+		display: block;
+		text-align: end;
+	}
+}
+
+.progressTop {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+	@media screen and (min-width: 768px) and (max-width: 1279px) {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 25px;
+	}
+	@media screen and (min-width: 1280px) {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.progressText {
+	margin-right: 26px;
+
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 17px;
+
+	letter-spacing: 0.2em;
+
+	color: #000000;
+	@media screen and (max-width: 1279px) {
+	}
+}
+.progressTextPoints {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 17px;
+
+	text-align: right;
+	letter-spacing: 0.2em;
+
+	color: #000000;
+	@media screen and (max-width: 1279px) {
+	}
+}

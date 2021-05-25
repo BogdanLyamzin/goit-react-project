@@ -1,0 +1,440 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-family: Montserrat;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	/* font: inherit;
+  vertical-align: baseline; */
+	outline: none;
+}
+ul,
+ol {
+	font-family: Montserrat;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+img {
+	border: 0;
+	max-width: 100%;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+.mainContainer {
+	margin-left: auto;
+	margin-right: auto;
+	@media screen and (max-width: 767px) {
+		width: 320px;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1279px) {
+		width: 768px;
+	}
+
+	@media screen and (min-width: 1280px) {
+		position: relative;
+		width: 1280px;
+		display: flex;
+	}
+
+	outline: 1px solid black;
+	text-align: center;
+}
+
+// .progressDesktop {
+// 	@media screen and (min-width: 1280px) {
+// 		position: absolute;
+// 		right: 53px;
+// 		top: 40px;
+// 	}
+// }
+
+.listDaysContainer {
+	@media screen and (max-width: 767px) {
+		padding-top: 20px;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1279px) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 22px 98px 22px 94px;
+		background: #ffbc33;
+
+		margin-bottom: 40px;
+	}
+
+	@media screen and (min-width: 1280px) {
+		padding-top: 40px;
+	}
+}
+// .listDays {
+// 	display: flex;
+// 	justify-content: center;
+// 	@media screen and (max-width: 767px) {
+// 		margin-bottom: 20px;
+// 	}
+// 	@media screen and (max-width: 1279px) {
+// 	}
+// 	@media screen and (min-width: 1280px) {
+// 		display: none;
+// 	}
+// }
+// .listDays span {
+// 	@media screen and (max-width: 1279px) {
+// 		font-style: normal;
+// 		font-weight: bold;
+// 		font-size: 12px;
+// 		line-height: 15px;
+
+// 		align-items: center;
+// 		text-align: center;
+// 		letter-spacing: 0.04em;
+
+// 		color: #000000;
+// 	}
+// }
+// .listDays li {
+// 	@media screen and (max-width: 767px) {
+// 		width: 35px;
+// 		height: 24px;
+
+// 		background: #ffbc33;
+// 		opacity: 0.5;
+// 		border-radius: 4px;
+
+// 		&:not(:last-child) {
+// 			margin-right: 4px;
+// 		}
+// 		&:hover,
+// 		&:focus {
+// 			opacity: 1;
+// 		}
+// 	}
+// 	@media screen and (min-width: 768px) and (max-width: 1279px) {
+// 		width: 40px;
+// 		height: 26px;
+
+// 		background: #ffffff;
+// 		opacity: 0.5;
+// 		border-radius: 4px;
+
+// 		&:not(:last-child) {
+// 			margin-right: 4px;
+// 		}
+
+// 		&:hover,
+// 		&:focus {
+// 			opacity: 1;
+// 		}
+// 	}
+// }
+// .listDaysText {
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	font-size: 14px;
+// 	line-height: 17px;
+
+// 	letter-spacing: 0.04em;
+// 	@media screen and (max-width: 767px) {
+// 		margin-bottom: 20px;
+// 	}
+// 	@media screen and (min-width: 768px) and (max-width: 1279px) {
+// 		margin-left: 28px;
+// 	}
+
+// 	@media screen and (min-width: 1280px) {
+// 		text-align: start;
+// 		margin-bottom: 30px;
+// 	}
+// }
+
+// .pointsContainer {
+// 	@media screen and (max-width: 767px) {
+// 		display: none;
+// 	}
+// 	@media screen and (min-width: 768px) {
+// 		display: block;
+// 		margin-bottom: 16px;
+
+// 		p {
+// 			font-style: normal;
+// 			font-weight: 500;
+// 			font-size: 12px;
+// 			line-height: 15px;
+
+// 			// text-align: center;
+// 			letter-spacing: 0.04em;
+
+// 			color: #a6abb9;
+
+// 			&:not(:last-child) {
+// 				margin-bottom: 10px;
+// 			}
+// 		}
+
+// 		span {
+// 			font-weight: bold;
+// 			color: #000000;
+// 		}
+// 	}
+// 	@media screen and (min-width: 1280px) {
+// 		display: block;
+// 		text-align: end;
+// 	}
+// }
+// .taskContainerTop {
+// 	@media screen and (max-width: 767px) {
+// 		display: none;
+// 	}
+// 	@media screen and (min-width: 768px) and (max-width: 1279px) {
+// 		display: none;
+// 	}
+// 	@media screen and (min-width: 1280px) {
+// 		display: flex;
+// 	}
+// }
+// .taskContainerBot {
+// 	@media screen and (max-width: 767px) {
+// 		display: block;
+// 	}
+// 	@media screen and (min-width: 768px) and (max-width: 1279px) {
+// 		display: flex;
+// 		justify-content: center;
+// 	}
+// 	@media screen and (min-width: 1280px) {
+// 		display: none;
+// 	}
+// }
+// .myTask {
+// 	font-style: normal;
+// 	font-weight: 500;
+// 	font-size: 12px;
+// 	line-height: 15px;
+
+// 	letter-spacing: 0.04em;
+
+// 	color: #a6abb9;
+// 	margin-bottom: 2px;
+// 	@media screen and (min-width: 768px) {
+// 		margin-right: 20px;
+// 	}
+// }
+// .date {
+// 	margin-bottom: 61px;
+// 	font-style: normal;
+// 	font-weight: bold;
+// 	font-size: 12px;
+// 	line-height: 15px;
+
+// 	letter-spacing: 0.2em;
+// 	text-transform: uppercase;
+// 	@media screen and (max-width: 1279px) {
+// 	}
+// }
+// .taskToday {
+// 	margin-bottom: 20px;
+// 	font-style: normal;
+// 	font-weight: bold;
+// 	font-size: 12px;
+// 	line-height: 15px;
+
+// 	text-align: center;
+// 	letter-spacing: 0.04em;
+// 	@media screen and (max-width: 767px) {
+// 	}
+// }
+
+// .buttonMain {
+// 	width: 220px;
+// 	height: 48px;
+// 	outline: none;
+// 	border: 0;
+// 	background: #ffbc33;
+// 	border-radius: 6px;
+
+// 	span {
+// 		font-style: normal;
+// 		font-weight: 500;
+// 		font-size: 12px;
+// 		line-height: 15px;
+
+// 		align-items: center;
+// 		text-align: center;
+// 		letter-spacing: 0.02em;
+
+// 		color: #fafafa;
+// 	}
+// 	@media screen and (max-width: 767px) {
+// 		margin-bottom: 61px;
+// 	}
+// 	@media screen and (min-width: 768px) and (max-width: 1279px) {
+// 		margin-bottom: 103px;
+// 	}
+// 	@media screen and (min-width: 1280px) {
+// 		margin-bottom: 40px;
+// 	}
+// }
+
+// .mainProgressContainer {
+// 	@media screen and (max-width: 767px) {
+// 		position: relative;
+// 		padding: 12px 20px 17px 20px;
+// 	}
+
+// 	@media screen and (min-width: 768px) and (max-width: 1279px) {
+// 		display: none;
+// 	}
+
+// 	@media screen and (min-width: 1280px) {
+// 		display: none;
+// 	}
+// }
+
+// .progressBot {
+// 	@media screen and (max-width: 767px) {
+// 		display: flex;
+// 	}
+// }
+
+// .progressTop {
+// 	@media screen and (max-width: 767px) {
+// 		display: none;
+// 	}
+// 	@media screen and (min-width: 768px) and (max-width: 1279px) {
+// 		display: flex;
+// 		justify-content: center;
+// 		margin-bottom: 25px;
+// 	}
+// 	@media screen and (min-width: 1280px) {
+// 		display: flex;
+// 		justify-content: flex-end;
+// 	}
+// }
+// .earnedPoints {
+// 	@media screen and (max-width: 767px) {
+// 		margin-bottom: 2px;
+
+// 		text-align: start;
+// 		font-style: normal;
+// 		font-weight: 500;
+// 		font-size: 12px;
+// 		line-height: 15px;
+
+// 		letter-spacing: 0.04em;
+
+// 		color: #a6abb9;
+// 	}
+// }
+// .progressText {
+// 	margin-right: 26px;
+
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	font-size: 14px;
+// 	line-height: 17px;
+
+// 	letter-spacing: 0.2em;
+
+// 	color: #000000;
+// 	@media screen and (max-width: 1279px) {
+// 	}
+// }
+// .progressTextPoints {
+// 	font-style: normal;
+// 	font-weight: bold;
+// 	font-size: 14px;
+// 	line-height: 17px;
+
+// 	text-align: right;
+// 	letter-spacing: 0.2em;
+
+// 	color: #000000;
+// 	@media screen and (max-width: 1279px) {
+// 	}
+// }
+// .scaleProgress {
+// 	@media screen and (max-width: 767px) {
+// 		width: 150px;
+// 	}
+// 	@media screen and (min-width: 768px) and (max-width: 1279px) {
+// 		width: 280px;
+// 	}
+// 	@media screen and (min-width: 1280px) {
+// 		width: 280px;
+// 	}
+// }
+
+// .imageButton {
+// 	padding: 0;
+// 	border: none;
+// 	// font: inherit;
+// 	// color: inherit;
+// 	background-color: transparent;
+
+// 	cursor: pointer;
+// 	@media screen and (max-width: 767px) {
+// 		position: absolute;
+// 		top: -20px;
+// 		right: 20px;
+// 	}
+// }
+
+// .sidebar {
+// 	@media screen and (max-width: 1279px) {
+// 		display: none;
+// 	}
+// 	@media screen and (min-width: 1280px) {
+// 		display: block;
+
+// 		width: 240px;
+// 		background: #ffbc33;
+// 	}
+// }
+// .listDaysSidebar {
+// 	display: block;
+// 	padding: 148px 0px 318px 50px;
+
+// 	li {
+// 		padding: 12px 10px 13px 27px;
+// 		background: #ffffff;
+// 		opacity: 0.5;
+// 		border-radius: 6px 0px 0px 6px;
+// 		text-align: start;
+
+// 		&:not(:last-child) {
+// 			margin-bottom: 6px;
+// 		}
+
+// 		span {
+// 			font-style: normal;
+// 			font-weight: bold;
+// 			font-size: 14px;
+// 			line-height: 17px;
+
+// 			letter-spacing: 0.04em;
+
+// 			color: #000000;
+// 		}
+
+// 		&:hover,
+// 		&:focus {
+// 			opacity: 1;
+// 			cursor: pointer;
+// 		}
+// 	}
+// }
+// .dateTop {
+// 	@media screen and (min-width: 1280px) {
+// 		margin-left: 110px;
+// 		margin-bottom: 94px;
+// 	}
+// }
