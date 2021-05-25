@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactComponent as Gift } from '../../../../images/Gift.svg';
+// import Button from '../../../../shared/components/Button';
 import styles from './AwardsCard.module.scss';
 
 const AwardsCard = () => {
@@ -15,7 +16,7 @@ const AwardsCard = () => {
                     <p className={styles.text}>Заработано баллов за эту неделю: <span className={styles.number_bold}>8</span></p>
                     <p className={styles.text}>Запланированно баллов на эту неделю: <span className={styles.number_bold}>16</span></p>
                     <span className={styles.number_bold}>8 <span className={styles.number}>/ 16</span></span> 
-                    <span className={styles.rate_line}></span>
+                    <progress className={styles.rate_line} value='0' max='100'></progress>
                 </div>
             </div>
             
