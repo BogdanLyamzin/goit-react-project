@@ -36,7 +36,6 @@ TaskCard.defaultProps = {
     title: '',
     reward: '',
     imageUrl: '',
-    date: '',
     isCompleted: false,
     toggleCompleted: () => { }
 }
@@ -45,7 +44,6 @@ TaskCard.propTypes = {
     title: PropTypes.string,
     reward: PropTypes.string,
     imageUrl: PropTypes.string,
-    date: PropTypes.string,
     isCompleted: PropTypes.bool,
     toggleCompleted: PropTypes.func,
 }
