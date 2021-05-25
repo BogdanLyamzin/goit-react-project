@@ -1,6 +1,5 @@
 @import 'src/shared/styles/_base';
 
-
 .input {
   width: 280px;
   height: 42px;
@@ -13,6 +12,10 @@
   color: $third-text-color;
   outline: none;
   margin-top: 10px;
+
+  @include tablet {
+      width: 320px;
+  }
 }
 
 .label{
@@ -29,10 +32,6 @@ text-transform: capitalize
   flex-direction: column;
 }
 
-@include tablet {
-  .input{
-    width: 320px;
-  }
-}
+
 
 

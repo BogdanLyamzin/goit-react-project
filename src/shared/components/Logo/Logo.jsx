@@ -5,19 +5,10 @@ import styles from './Logo.module.scss'
 
 const Logo = () => {
     return (
-    <>
-        
-        <div className={styles.logoWrapper}>
-            <Link to='/'>
-                <span className={styles.logo}>KidsLike</span>
+            <Link to='/' className={styles.logo}>
+                <span className={styles.text}>KidsLike</span>
+                <LogoSite className={styles.img}/>
             </Link>
-            <LogoSite className={styles.logoSVG}/>
-        </div>
-           
-        
-        </>
-            
-
     )
 }
 
