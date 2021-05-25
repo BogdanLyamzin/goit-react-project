@@ -37,4 +37,4 @@ function MainPage() {
 			</div>
 		</div>
 	)
-
+}
