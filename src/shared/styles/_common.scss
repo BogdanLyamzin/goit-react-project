@@ -1,3 +1,6 @@
+body {
+	font-family: "Montserrat", sans-serif;
+}
 .container {
 	max-width: 100%;
 	margin: 0 auto;
@@ -5,11 +8,10 @@
 	padding-right: 20px;
 
 	@include tablet {
-		max-width: 580px;
-		padding: 0;
+		max-width: 620px;
 	}
 	@include desktop {
-		max-width: 1180px;
+		max-width: 1220px;
 	}
 }
 

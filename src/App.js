@@ -1,10 +1,17 @@
-import MainPage from "./pages/MainPage"
+import React from "react"
+import { BrowserRouter as Router } from "react-router-dom"
+
+import Routes from "./routes"
+import Navbar from "./client/Navba/Navbar"
+import Footer from "./Footer/Footer"
 
 function App() {
 	return (
-		<>
-			<MainPage />
-		</>
+		<Router>
+			<Navbar />
+			<Routes />
+			<Footer />
+		</Router>
 	)
 }
 

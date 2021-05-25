@@ -1,4 +1,5 @@
 import React from "react"
+
 import styles from "./MainPage.module.scss"
 
 // import planer from "./images/planer-2.jpeg"
@@ -36,6 +37,4 @@ function MainPage() {
 			</div>
 		</div>
 	)
-}
 
-export default MainPage
