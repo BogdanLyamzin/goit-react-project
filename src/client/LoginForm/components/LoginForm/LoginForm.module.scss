@@ -1,9 +1,6 @@
 @import "../../../../shared/styles/base";
 
-@import "../../../../shared/styles/style";
-
 .form {
-  height: 400px;
   width: 320px;
   border-radius: 6px;
   background: #ffffff;
@@ -45,15 +42,9 @@
 
 @include tablet {
   .form {
-    height: 400px;
-    width: 320px;
-    border-radius: 6px;
     background: #ffffff;
     box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.1);
     padding: 40px;
     margin: 0 auto;
   }
-}
-
-@include desktop {
 }
