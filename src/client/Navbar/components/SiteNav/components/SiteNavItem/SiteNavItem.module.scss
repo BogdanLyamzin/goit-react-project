@@ -1,0 +1,27 @@
+.link {
+  display: inline-block;
+  height: 19px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.04em;
+  color: #858598;
+}
+
+.link:focus {
+  transform: translate(scale);
+  transition-duration: 400ms;
+  font-size: 14px;
+  outline: none;
+}
+.link:not(:last-child) {
+  border-right: 2px solid #858598;
+  padding-right: 15px;
+  margin-right: 15px;
+}
+.active {
+  @extend .link;
+  color: #000;
+}

@@ -1,0 +1,12 @@
+.nonBurger {
+  display: none;
+}
+.burger {
+  margin-right: 10px;
+  stroke: #858598;
+  transform: translate(scale);
+  transition-duration: 500ms;
+}
+.burger:hover {
+  stroke: #000;
+}
