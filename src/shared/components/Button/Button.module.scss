@@ -1,5 +1,5 @@
-@import "../../styles/variables";
-@import '../../styles/mixins';
+@import '../../styles/base';
+@import '../../styles/style.scss';
 
 .btn {
   background-color: $primary-bg-color;
@@ -15,6 +15,7 @@
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  transition: background 250ms linear;
   &:hover {
     background: #ffa500;
   }
