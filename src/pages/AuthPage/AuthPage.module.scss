@@ -1,0 +1,43 @@
+@import "../../shared/styles/base";
+
+@import "../../shared/styles/style.scss";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.wrapperFoto {
+  position: relative;
+}
+.imgContainer {
+  position: absolute;
+}
+.imgContainer:nth-child(2) {
+  top: 348px;
+  z-index: 2;
+}
+
+.imgContainer:nth-child(4) {
+  top: 476px;
+  left: 220px;
+  z-index: 3;
+}
+.imgContainer:nth-child(3) {
+  top: 190px;
+  left: 220px;
+  z-index: 1;
+}
+
+.imgContainer:nth-child(1) {
+  top: 20px;
+}
+.title {
+  font-weight: 600;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.23;
+  padding-bottom: 32px;
+}
+.form {
+  padding: 72px 80px 40px 100px;
+}

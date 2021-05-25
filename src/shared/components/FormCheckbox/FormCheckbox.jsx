@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { v4 } from 'uuid';
 
-import styles from './FormCheckbox.module.sass'
+import styles from './FormCheckbox.module.scss'
 
 
 const FormCheckbox = ({ label, className, ...props}) => {

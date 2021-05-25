@@ -1,0 +1,33 @@
+@import "../../../../shared/styles/base";
+
+@import "../../../../shared/styles/style";
+
+.form {
+  height: 400px;
+  width: 320px;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+.buttonContainer {
+  display: flex;
+  margin: 0 auto;
+}
+.button {
+  display: block;
+}
+.button:not(:last-child) {
+  margin-right: 12px;
+}
+.title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  color: #858598;
+  margin-bottom: 20px;
+}
+.input {
+  margin-bottom: 20px;
+}
