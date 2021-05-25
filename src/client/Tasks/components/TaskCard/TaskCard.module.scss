@@ -1,11 +1,11 @@
 @import 'src/shared/styles/base';
 
-.taskItem {
+.item {
     border-radius: 6px 6px 0px 0px;
     filter: drop-shadow(4px 6px 15px rgba(0, 0, 0, 0.1));
 }
 
-.taskTitle {
+.title {
     font-weight: 700;
     font-size: 12px;
     line-height: 1.25;
@@ -14,14 +14,14 @@
     color: $primary-text-color;
 }
 
-.taskDescription {
+.description {
     @include flex( space-between, center);
     background-color: $primary-bg-color;
     border-radius: 0px 0px 6px 6px;
     padding: 14px 20px 17px 20px ;
 }
 
-.taskScore {
+.score {
     font-weight: 500;
     font-size: 10px;
     line-height: 1.2;

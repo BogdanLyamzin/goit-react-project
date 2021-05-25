@@ -13,14 +13,14 @@ const TaskCard = ({ title, reward, imageUrl, date, isCompleted, toggleCompleted 
     const exactDate = today === date;
 
     return (
-        <li className={styles.taskItem}>
+        <li className={styles.item}>
             <div>
-                <img src={imageUrl} alt={title} className={styles.taskImage} />
+                <img src={imageUrl} alt={title} />
             </div>
-            <div className={styles.taskDescription}>
+            <div className={styles.description}>
                 <div>
-                    <h3 className={styles.taskTitle}>{title}</h3>
-                    <p className={styles.taskScore}>{reward} балла</p>
+                    <h3 className={styles.title}>{title}</h3>
+                    <p className={styles.score}>{reward} балла</p>
                 </div>
                 {exactDate && <input onChange={toggleCompleted}></input>}
                 <div>
