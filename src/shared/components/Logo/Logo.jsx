@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom'
-import { ReactComponent as Logo } from '../../../../public/images/Logo.svg';
+import { ReactComponent as LogoSite } from '../../../images/Logo.svg';
+
+import styles from './Logo.module.scss'
 
 const Logo = () => {
     return (
-    
-        <Link to='/'>
-            <span>KidsLike</span>
-            <Logo />
-        </Link>
-            
+            <Link to='/' className={styles.logo}>
+                <span className={styles.text}>KidsLike</span>
+                <LogoSite className={styles.img}/>
+            </Link>
     )
 }
 

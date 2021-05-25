@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { v4 } from 'uuid';
 
 
-import styles from './FormRadio.module.sass'
+import styles from './FormRadio.module.scss'
 
 const FormRadio = ({ label, className, ...props}) => {
     const id = v4();
