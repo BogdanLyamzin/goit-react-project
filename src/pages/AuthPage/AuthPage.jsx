@@ -17,18 +17,18 @@ const AuthPage = () => {
         <>
             <section className={s.container}>
                 <div className={s.wrapper}>
-                    <div className={s.wrapperFoto }>
+                    <div className={s.containerFoto}>
                             <div className={s.imgContainer}>
-                                <img src={foto1} alt="family" className={s.img}></img>
+                                <img src={foto1} alt="family"></img>
                             </div>
                             <div className={s.imgContainer}>
-                                <img src={foto2} alt="robot" className={s.img}></img>
+                                <img src={foto2} alt="robot"></img>
                             </div>
                             <div className={s.imgContainer}>
-                                <img src={foto3} alt="gamepad" className={s.img}></img>
+                                <img src={foto3} alt="gamepad"></img>
                             </div>
                             <div className={s.imgContainer}>
-                                <img src={foto4} alt="family" className={s.img}></img>
+                                <img src={foto4} alt="family"></img>
                             </div>
                     </div>
 
