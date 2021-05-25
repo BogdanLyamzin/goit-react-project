@@ -1,12 +1,59 @@
 .nonBurger {
   display: none;
 }
-.burger {
-  margin-right: 10px;
-  stroke: #858598;
-  transform: translate(scale);
-  transition-duration: 500ms;
+
+@media screen and (min-width: 1080px) {
+  .burger {
+    display: none;
+  }
+  .navigation {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-right: 40px;
+    height: 100%;
+  }
 }
-.burger:hover {
-  stroke: #000;
+
+@media screen and (max-width: 1079px) {
+  .container {
+    display: flex;
+    position: relative;
+  }
+  .burger {
+    stroke: #858598;
+    transform: translate(scale);
+    transition-duration: 500ms;
+    margin-right: 40px;
+  }
+  .burger:hover {
+    stroke: #000;
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    stroke: white;
+  }
+  .close:hover {
+    stroke: black;
+  }
+  .navigation {
+    position: absolute;
+    top: 0;
+    right: -193px;
+    width: 274px;
+    height: 100vh;
+    background-color: #ffbc33;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navigation {
+    right: -120px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .navigation {
+    right: -100px;
+  }
 }

@@ -2,18 +2,21 @@ import { useSelector } from "react-redux";
 
 import SiteNav from '../SiteNav'
 import AuthNav from '../AuthNav'
-import {ReactComponent as Burger } from './images/menu.svg'
+import { ReactComponent as Burger } from './images/menu.svg'
+import {ReactComponent as Close } from './images/close.svg'
 
 import styles from './Navbar.module.scss'
 
 const Navbar = ({ isLoggedIn = true }) => {
     return (
-    <>
-        <span className={styles.burger}><Burger/></span>
+    <div className={styles.container}>
+            <span className={styles.burger}><Burger /></span>
+        <div className={styles.navigation}>
+         <span className={styles.close}><Close/></span>
         { isLoggedIn ?
-            <div><SiteNav/></div> : <div><AuthNav/></div>
-        }
-    </>
+            <SiteNav/> : <AuthNav/>}
+        </div>
+    </div>
     )
 }  
 

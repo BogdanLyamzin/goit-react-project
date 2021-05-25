@@ -6,26 +6,26 @@ import Navbar from '../client/Navbar/components/Navbar'
 
 import styles from './Header.module.scss'
 
-const Header = ({isLoggedIn, scoreBalance = 0 }) => (
+const Header = ({isLoggedIn = true , scoreBalance = 0 }) => (
     <header className={styles.header}>
-        <div className={styles.container}>
-            <div className={styles.leftSide}>
+    <div className={styles.container}>
+      <div className={styles.leftSide}>
             <NavLink to='/' className={styles.logo}>LOGO</NavLink>
             <div className={styles.scoreBalance} >
                 <p className={styles.text}>Баланс<br/> баллов:</p>
                 <span className={styles.score} >{scoreBalance}</span>
             </div>
-            </div>
-        <div className={styles.navigation}>
-        <Navbar />
-        { isLoggedIn &&  
-        <>     
-        <h2>User</h2>
-        <button>logout</button>
-        </>
-        }
-        </div>
-        </div>
+      </div>
+      <div className={styles.rightSide}>
+          <Navbar />
+          { isLoggedIn &&  
+          <div className={styles.userContainer}>     
+                <h2>User</h2>
+                <button>logout</button>
+          </div>
+          }
+      </div>
+    </div>
     </header>
 );
 
