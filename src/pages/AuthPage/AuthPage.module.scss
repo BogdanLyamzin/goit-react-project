@@ -2,28 +2,69 @@
 
 @import "../../shared/styles/style.scss";
 
-@include tablet {
-  .title {
-    line-height: 1.21;
-    padding-bottom: 38px;
-    text-align: center;
-  }
+.containerFoto {
+  display: none;
 }
 
-@include desktop {
+.title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+@include tablet {
+  .title {
+    padding-bottom: 38px;
+  }
   .wrapper {
-    @include grid(590px, auto-fill) // display: grid
-      // grid-template-columns: 1fr 1fr;;
-;
+    display: flex;
+    flex-direction: column-reverse;
   }
   .containerFoto {
+    display: flex;
     position: relative;
+    //   flex-direction: column-reverse;
   }
+
   .imgContainer {
     position: absolute;
     &:nth-child(2) {
       top: 348px;
       z-index: 2;
+      display: none;
+    }
+
+    &:nth-child(4) {
+      top: 78px;
+      left: 400px;
+      z-index: 2;
+    }
+    &:nth-child(3) {
+      top: 104px;
+      left: 136px;
+      z-index: 3;
+    }
+    &:nth-child(1) {
+      top: 62px;
+      left: -214px;
+    }
+  }
+}
+@include desktop {
+  .wrapper {
+    @include grid(590px, auto-fill);
+  }
+  //   .containerFoto {
+  //     position: relative;
+  //   }
+  .imgContainer {
+    position: absolute;
+    &:nth-child(2) {
+      top: 348px;
+      z-index: 2;
+      display: block;
     }
 
     &:nth-child(4) {
@@ -38,6 +79,7 @@
     }
     &:nth-child(1) {
       top: 20px;
+      left: 0px;
     }
   }
   .title {
@@ -46,6 +88,7 @@
     font-weight: 600;
     line-height: 1.23;
     padding-bottom: 32px;
+    text-align: start;
   }
   .form {
     padding: 72px 80px 40px 100px;
