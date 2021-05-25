@@ -73,3 +73,5 @@ class BaseHttpService {
         localStorage.removeItem('accessToken')
     }
 }
+
+export default BaseHttpService;
