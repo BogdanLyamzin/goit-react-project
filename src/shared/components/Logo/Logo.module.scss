@@ -1,6 +1,4 @@
-@import '../../styles/base';
-@import '../../styles/style.scss';
-
+@import 'src/shared/styles/_base';
 
 .logo{
     font-weight: 700;
@@ -8,17 +6,20 @@
     line-height: 1.25;
     letter-spacing: 0.08em;
     color: $primary-text-color;
-}
-
-.logoSVG{
+&SVG{
     width: 13px;
     height: 18px;
     fill: currentColor;
     margin-left: 7px;
 }
 
-.logoWrapper{
+&Wrapper{
     width: 103px;
     height: 20px;
     @include flex(start, center);
 }
+
+}
+
+
+

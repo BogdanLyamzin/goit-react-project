@@ -1,6 +1,8 @@
-@import '../../styles/style.scss';
+@import 'src/shared/styles/base';
 
-  .checkboxInputHidden{
+
+.checkbox{
+  &InputHidden{
     position: absolute;
     left: 0;
     top: 0;
@@ -12,9 +14,8 @@
     pointer-events: none;
   }
 
-  .checkboxInput{
-    display: flex;
-    align-items: center;
+  &Input{
+    @include flex(start, center);
     flex-shrink: 0;
     position: relative;
     display: flex;
@@ -37,6 +38,11 @@
 
   }
 
-  .checkboxInputHidden:checked + .checkboxInput{
+  &InputHidden:checked + &Input{
     background-color: #FFFFFF;
   }
+
+}
+
+ 
+ 
