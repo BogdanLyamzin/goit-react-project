@@ -5,19 +5,6 @@
 	padding-top: 20px;
 	padding-bottom: 40px;
 }
-.container_title {
-	@include flex;
-	padding-bottom: 30px;
-}
-.title {
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 1.21;
-	text-transform: uppercase;
-	color: $primary-text-color;
-	padding-left: 14px;
-	padding-top: 5px;
-}
 
 .list {
 	@include grid(280px, auto-fit);
@@ -57,6 +44,7 @@
 	line-height: 1.219;
 	padding: 3px 10px;
 	margin-top: 4px;
+	color: #ffffff;
 	background-color: #5679d7;
 	border-radius: 3px;
 }
@@ -79,9 +67,7 @@
 	.container_awards {
 		padding-top: 60px;
 	}
-	.container_title {
-		padding-bottom: 60px;
-	}
+
 	.container_main {
 		@include flex(space-between, stretch);
 	}
