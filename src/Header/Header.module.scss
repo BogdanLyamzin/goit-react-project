@@ -32,16 +32,17 @@ ul {
   text-decoration: none;
   font-weight: bold;
   color: $primary-text-color;
-}
-.logo:hover {
-  color: $primary-bg-color;
-  fill: $primary-text-color;
-}
-.logoIcon {
-  height: 18px;
-  width: 13px;
-  fill: $primary-bg-color;
-  vertical-align: bottom;
+
+  &:hover {
+    color: $primary-bg-color;
+    fill: $primary-text-color;
+  }
+  &Icon {
+    height: 18px;
+    width: 13px;
+    fill: $primary-bg-color;
+    vertical-align: bottom;
+  }
 }
 .scoreBalance {
   @include flex(_, center);

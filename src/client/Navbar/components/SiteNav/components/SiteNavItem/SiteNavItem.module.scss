@@ -11,17 +11,16 @@
     line-height: 15px;
     letter-spacing: 0.04em;
     color: $secondary-text-color;
-  }
 
-  .link:focus {
-    transition-duration: 400ms;
-    outline: none;
-    color: $primary-text-color;
-  }
-  .link:not(:last-child) {
-    border-right: 2px solid $secondary-text-color;
-    padding-right: 15px;
-    margin-right: 15px;
+    &:focus {
+      outline: none;
+      color: $primary-text-color;
+    }
+    &:not(:last-child) {
+      border-right: 2px solid $secondary-text-color;
+      padding-right: 15px;
+      margin-right: 15px;
+    }
   }
   .active {
     @extend .link;

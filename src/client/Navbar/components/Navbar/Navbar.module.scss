@@ -1,9 +1,5 @@
 @import ".././../../../shared/styles/style.scss";
 
-.nonBurger {
-  display: none;
-}
-
 @include desktop {
   .burger {
     display: none;
@@ -42,9 +38,10 @@
     stroke: $secondary-text-color;
     transition-duration: 500ms;
     margin-right: 40px;
-  }
-  .burger:hover {
-    stroke: $primary-text-color;
+
+    &:hover {
+      stroke: $primary-text-color;
+    }
   }
   .user {
     @include flex(center, center);
@@ -58,9 +55,10 @@
     height: 16px;
     width: 16px;
     stroke: white;
-  }
-  .close:hover {
-    stroke: $primary-text-color;
+
+    &:hover {
+      stroke: $primary-text-color;
+    }
   }
   .backdrop {
     background-color: rgba(0, 0, 0, 0.2);
