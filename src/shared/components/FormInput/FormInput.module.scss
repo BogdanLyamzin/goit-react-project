@@ -1,4 +1,4 @@
-@import 'src/shared/styles/_base';
+@import "src/shared/styles/_base";
 
 .input {
   width: 280px;
@@ -14,24 +14,19 @@
   margin-top: 10px;
 
   @include tablet {
-      width: 320px;
+    width: 320px;
   }
 }
 
-.label{
-font-size: 12px;
-line-height: 1.25;
-letter-spacing: 0.04em;
-color: $secondary-text-color;
-text-transform: capitalize
-
+.label {
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  color: $secondary-text-color;
+  text-transform: capitalize;
 }
 
-.formGroup{
+.formGroup {
   @include flex(start, start);
   flex-direction: column;
 }
-
-
-
-
