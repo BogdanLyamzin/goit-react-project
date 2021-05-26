@@ -13,7 +13,6 @@ function App() {
   return (
     <Router>
       <AuthPage />
-       <AwardsPage/>
       <AwardsPage/>
       <Routes />
       <Footer />
