@@ -2,21 +2,22 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AwardsPage from './pages/AwardsPage/AwardsPage';
 import Routes from './routes'
-import Navbar from './client/Navba/Navbar';
 import AuthPage from './pages/AuthPage'
-import AuthPage from './pages/AuthPage'
-import Footer from './Footer/Footer';
+import Footer from "./client/Footer/components/Footer";
+// import Footer from "./Footer/components/Footer/Footer";
+
+import Loader from "./shared/components/Loader";
 
 function App() {
 
   return (
-
     <Router>
       <AuthPage />
        <AwardsPage/>
-      <Navbar />
+      <AwardsPage/>
       <Routes />
-      <Footer /> 
+      <Footer />
+      <Loader />
     </Router>
   );
 };
