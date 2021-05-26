@@ -7,11 +7,7 @@
   position: fixed;
   top: 0;
   z-index: 900;
-}
-body {
-  margin: 0;
-  overflow-x: hidden;
-  padding-top: 80px;
+  background-color: #fff;
 }
 ul {
   margin: 0;
@@ -73,12 +69,8 @@ ul {
 
   color: $primary-text-color;
 }
-@media screen and (min-width: 1080px) {
-}
-@media screen and (min-width: 768px) {
-  .container {
-    margin: 0px 94px;
-  }
+
+@include tablet {
   .userContainer {
     @include flex(_, center);
   }

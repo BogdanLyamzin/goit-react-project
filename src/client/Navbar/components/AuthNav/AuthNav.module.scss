@@ -1,6 +1,6 @@
 @import "../../../../shared/styles/style.scss";
 
-@media screen and (min-width: 768px) {
+@include tablet {
   .link {
     display: inline-block;
     height: 19px;
@@ -14,7 +14,6 @@
   }
 
   .link:focus {
-    transform: translate(scale);
     transition-duration: 400ms;
     outline: none;
     color: $primary-text-color;
@@ -44,7 +43,7 @@
     text-decoration: none;
     padding: 14.5px 30px;
     width: 274px;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid $third-text-color;
 
     color: #ffffff;
   }
@@ -53,7 +52,7 @@
   }
   .navigation {
     margin-top: 80px !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid $third-text-color;
 
     background-color: $primary-bg-color !important;
   }

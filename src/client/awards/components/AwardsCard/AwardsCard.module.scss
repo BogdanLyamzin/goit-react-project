@@ -1,29 +1,32 @@
+@import "src/shared//styles/base.scss";
+@import "src/shared/styles/style.scss";
+
 .container_awards {
-	display: flex;
-	padding-top: 25px;
-	padding-left: 20px;
-}
-.container_title {
 	padding-top: 20px;
-	padding-bottom: 34px;
+	padding-bottom: 40px;
 }
-.title {
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 1.21;
-	text-transform: uppercase;
+
+.list {
+	@include grid(280px, auto-fit);
+	grid-gap: 20px;
+}
+
+.item {
+	margin: 0 auto;
+	box-shadow: (4px 6px 15px rgba(0, 0, 0, 0.1));
+	border-radius: 6px 6px 6px 6px;
 }
 
 .container_card {
+	@include flex(space-between, stretch);
 	width: 100%;
 	height: 68px;
-	background-color: #ffbc33;
+	background-color: $primary-bg-color;
 	border-radius: 0px 0px 6px 6px;
 }
 .container_info {
-	display: flex;
+	@include flex(start, flex-start);
 	flex-direction: column;
-	align-items: flex-start;
 	padding-left: 20px;
 	padding-top: 14px;
 }
@@ -32,26 +35,82 @@
 	font-size: 12px;
 	line-height: 1.22;
 	text-transform: uppercase;
-	color: #000000;
+	color: $primary-text-color;
 	margin: 0;
 }
-.list {
-	padding: 0;
-	list-style: none;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-	grid-gap: 20px;
-}
-.item {
-	margin: 0 auto;
-	box-shadow: (4px 6px 15px rgba(0, 0, 0, 0.1));
-	border-radius: 6px 6px 6px 6px;
-}
+
 .price {
 	font-size: 10px;
 	line-height: 1.219;
 	padding: 3px 10px;
 	margin-top: 4px;
+	color: #ffffff;
 	background-color: #5679d7;
 	border-radius: 3px;
+}
+.container_checkboxtoggle {
+	@include flex(start, flex-start);
+	flex-direction: column;
+	padding-right: 25px;
+	padding-top: 20px;
+}
+.rating {
+	display: none;
+}
+.button_confirm {
+	display: block;
+	margin: 0 auto;
+	width: 220px;
+}
+
+@include tablet {
+	.container_awards {
+		padding-top: 60px;
+	}
+
+	.container_main {
+		@include flex(space-between, stretch);
+	}
+	.rating {
+		display: block;
+	}
+	.text {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 1.22;
+		color: $third-text-color;
+		text-align: end;
+
+		&:not(:last-child) {
+			margin-top: 10px;
+		}
+	}
+
+	.number_bold {
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 1.22;
+		color: $primary-text-color;
+	}
+	.number_rate {
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 1.22;
+		color: $primary-text-color;
+		margin-right: 19px;
+	}
+	.number {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 1.21;
+		color: $primary-text-color;
+	}
+	.rate_line {
+		width: 280px;
+	}
+}
+@include desktop {
+	.container_awards {
+		padding-bottom: 60px;
+	}
 }

@@ -4,7 +4,7 @@
   display: none;
 }
 
-@media screen and (min-width: 1080px) {
+@include desktop {
   .burger {
     display: none;
   }
@@ -20,7 +20,7 @@
 .backdrop {
   display: none;
 }
-@media screen and (max-width: 1079px) {
+@media screen and (max-width: 1199px) {
   .navigation {
     position: absolute;
     top: 0;
@@ -48,6 +48,7 @@
   }
   .user {
     @include flex(center, center);
+    height: 50px;
     margin-bottom: -50px;
   }
   .close {
@@ -71,10 +72,9 @@
     display: block !important;
   }
 }
-@media screen and (min-width: 768px) {
+@include tablet {
   .unAuth {
     @include flex(_, center);
-    margin-right: 40px;
     height: 100%;
     background-color: transparent;
     transform: translateX(0);

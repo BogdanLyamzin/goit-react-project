@@ -8,7 +8,7 @@ import {ReactComponent as Close } from './icons/close.svg'
 
 import styles from './Navbar.module.scss'
 
-function Navbar({ isLoggedIn}) {
+function Navbar({ isLoggedIn = true }) {
     const [burger, setBurger] = useState(false)
 
     const toggleBurger = () => {
