@@ -1,7 +1,50 @@
-import React from "react"
+import React from 'react';
+import LoginForm from '../../client/LoginForm/components/LoginForm';
+import NewTask from '../../client/Tasks/components/NewTask'
+
+
+import family1 from './images/family1.png';
+import family2 from './images/family2.png';
+import robot from './images/robot.png';
+import gamepad from './images/gamepad.png';
+import s from './AuthPage.module.scss'
 
 const AuthPage = () => {
-  return <div></div>
+    const foto1 = family1;
+    const foto2 = robot;
+    const foto3 = gamepad;
+    const foto4 = family2;
+
+    return (
+        <>
+            <section>
+                <NewTask/>
+                <div  className="container">
+                <div className={s.wrapper}>
+                <div className={s.containerFoto }>
+                        <div className={s.imgContainer}>
+                            <img src={foto1} alt="family"/>
+                        </div>
+                        <div className={s.imgContainer}>
+                            <img src={foto2} alt="robot"/>
+                        </div>
+                        <div className={s.imgContainer}>
+                            <img src={foto3} alt="gamepad"/>
+                        </div>
+                        <div className={s.imgContainer}>
+                            <img src={foto4} alt="family"/>
+                        </div>
+                </div>
+
+                <div className={s.form}>
+                    <h1 className={s.title}>Выполняй задания,<br/> получи классные призы!</h1>
+                    <LoginForm />
+                </div>
+                </div>
+            </div>
+            </section>
+        </>
+    )
 }
 
-export default AuthPage
+export default AuthPage;
