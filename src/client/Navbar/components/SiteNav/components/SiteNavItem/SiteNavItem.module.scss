@@ -1,3 +1,5 @@
+@import "../../../../../../shared/styles/style.scss";
+
 @media screen and (min-width: 1080px) {
   .link {
     display: inline-block;
@@ -8,28 +10,27 @@
     font-size: 12px;
     line-height: 15px;
     letter-spacing: 0.04em;
-    color: #858598;
+    color: $primary-text-color;
   }
 
   .link:focus {
     transform: translate(scale);
     transition-duration: 400ms;
     outline: none;
-    color: #000;
+    color: $primary-text-color;
   }
   .link:not(:last-child) {
-    border-right: 2px solid #858598;
+    border-right: 2px solid $secondary-text-color;
     padding-right: 15px;
     margin-right: 15px;
   }
   .active {
     @extend .link;
-    color: #000;
+    color: $primary-text-color;
   }
 }
 @media screen and (max-width: 1079px) {
   .link {
-    // font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -43,6 +44,6 @@
     color: #ffffff;
   }
   .active {
-    color: #000000;
+    color: $primary-text-color;
   }
 }

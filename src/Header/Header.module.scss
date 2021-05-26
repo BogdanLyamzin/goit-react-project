@@ -1,10 +1,17 @@
+@import "../shared/styles/style.scss";
+
 .header {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   height: 62px;
   width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 900;
 }
 body {
   margin: 0;
+  overflow-x: hidden;
+  padding-top: 80px;
 }
 ul {
   margin: 0;
@@ -12,34 +19,38 @@ ul {
   overflow: hidden;
 }
 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(space-between, center);
+  height: 100%;
 }
-// .navigation {
-//   display: flex;
-//   justify-content: left;
-//   align-items: center;
-//   margin-right: 40px;
-// }
 
 .rightSide {
-  display: flex;
+  @include flex();
 }
 .leftSide {
-  display: flex;
-  align-items: center;
+  @include flex(_, center);
 }
-.userContainer {
-  display: flex;
-  align-items: center;
+.logo {
+  text-align: center;
+  width: 103px;
+  height: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: $primary-text-color;
+}
+.logo:hover {
+  color: $primary-bg-color;
+  fill: $primary-text-color;
+}
+.logoIcon {
+  height: 18px;
+  width: 13px;
+  fill: $primary-bg-color;
+  vertical-align: bottom;
 }
 .scoreBalance {
-  display: flex;
-  align-items: center;
+  @include flex(_, center);
 }
 .text {
-  //   font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   margin-right: 10px;
@@ -47,177 +58,33 @@ ul {
   line-height: 15px;
   letter-spacing: 0.04em;
 
-  color: #a6abb9;
+  color: $third-text-color;
 }
 .scoreBalance {
   margin-left: 42px;
 }
 .score {
-  //   font-family: Montserrat;
+  @include flex(_, center);
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 17px;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.04em;
 
-  color: #000000;
+  color: $primary-text-color;
 }
 @media screen and (min-width: 1080px) {
-  .container {
-    margin: 0px 50px;
-  }
 }
 @media screen and (min-width: 768px) {
   .container {
     margin: 0px 94px;
   }
-}
-@media screen and (max-width: 767px) {
-  .container {
-    margin: 0px 20px;
+  .userContainer {
+    @include flex(_, center);
   }
 }
-
-//==================================
-// body {
-//   margin: 0;
-//   font-family: Helvetica, sans-serif;
-//   background-color: #f4f4f4;
-// }
-
-// a {
-//   color: #000;
-// }
-
-/* header */
-
-// .header {
-//   background-color: #fff;
-//   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-//   position: fixed;
-//   width: 100%;
-//   z-index: 3;
-// }
-
-// .header ul {
-//   margin: 0;
-//   padding: 0;
-//   list-style: none;
-//   overflow: hidden;
-//   background-color: #fff;
-// }
-
-// .header li a {
-//   display: block;
-//   padding: 20px 20px;
-//   border-right: 1px solid #f4f4f4;
-//   text-decoration: none;
-// }
-
-// .header li a:hover,
-// .header .menu-btn:hover {
-//   background-color: #f4f4f4;
-// }
-
-// .header .logo {
-//   display: block;
-//   float: left;
-//   font-size: 2em;
-//   padding: 10px 20px;
-//   text-decoration: none;
-// }
-
-// /* menu */
-
-// .header .menu {
-//   clear: both;
-//   max-height: 0;
-//   transition: max-height 0.2s ease-out;
-// }
-
-// /* menu icon */
-
-// .header .menu-icon {
-//   cursor: pointer;
-//   display: inline-block;
-//   float: right;
-//   padding: 28px 20px;
-//   position: relative;
-//   user-select: none;
-// }
-
-// .header .menu-icon .navicon {
-//   background: #333;
-//   display: block;
-//   height: 2px;
-//   position: relative;
-//   transition: background 0.2s ease-out;
-//   width: 18px;
-// }
-
-// .header .menu-icon .navicon:before,
-// .header .menu-icon .navicon:after {
-//   background: #333;
-//   content: "";
-//   display: block;
-//   height: 100%;
-//   position: absolute;
-//   transition: all 0.2s ease-out;
-//   width: 100%;
-// }
-
-// .header .menu-icon .navicon:before {
-//   top: 5px;
-// }
-
-// .header .menu-icon .navicon:after {
-//   top: -5px;
-// }
-
-// /* menu btn */
-
-// .header .menu-btn {
-//   display: none;
-// }
-
-// .header .menu-btn:checked ~ .menu {
-//   max-height: 240px;
-// }
-
-// .header .menu-btn:checked ~ .menu-icon .navicon {
-//   background: transparent;
-// }
-
-// .header .menu-btn:checked ~ .menu-icon .navicon:before {
-//   transform: rotate(-45deg);
-// }
-
-// .header .menu-btn:checked ~ .menu-icon .navicon:after {
-//   transform: rotate(45deg);
-// }
-
-// .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-// .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-//   top: 0;
-// }
-
-// /* 48em = 768px */
-
-// @media (min-width: 48em) {
-//   .header li {
-//     float: left;
-//   }
-//   .header li a {
-//     padding: 20px 30px;
-//   }
-//   .header .menu {
-//     clear: none;
-//     float: right;
-//     max-height: none;
-//   }
-//   .header .menu-icon {
-//     display: none;
-//   }
-// }
+@media screen and (max-width: 767px) {
+  .userContainer {
+    display: none;
+  }
+}

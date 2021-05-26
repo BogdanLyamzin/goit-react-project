@@ -1,3 +1,5 @@
+@import "../../../../../../shared/styles/style.scss";
+
 @media screen and(max-width: 1079px) {
   .navigation {
     display: flex;
@@ -5,6 +7,6 @@
     margin-top: 80px !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 
-    background-color: #ffbc33 !important;
+    background-color: $primary-bg-color !important;
   }
 }

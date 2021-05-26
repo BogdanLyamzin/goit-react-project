@@ -1,11 +1,12 @@
 import Header from './Header'
+import "./shared/styles/style.scss"
+
 
 function App() {
   return (
     <>
-      <Header/>
+      <Header />
     </>
   );
 }
-
-export default App;
+export default App

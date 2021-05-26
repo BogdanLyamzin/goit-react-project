@@ -3,8 +3,8 @@ import SiteNavItems from '../SiteNavItems'
 
 import styles from './SiteNavList.module.scss'
 
-const SiteNavList = () => {
-    const siteNav = [...SiteNavItems].map(item => <SiteNavItem {...item} /> )
+const SiteNavList = ({toggleBurger}) => {
+    const siteNav = [...SiteNavItems].map(item => <SiteNavItem {...item} toggleBurger={toggleBurger} /> )
     return (
         <ul className={styles.navigation}>
             {siteNav}

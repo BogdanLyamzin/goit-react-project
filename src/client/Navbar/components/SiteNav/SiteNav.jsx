@@ -1,8 +1,8 @@
 import SiteNavList from './components/SiteNavList'
 
-const SiteNav = () => (
+const SiteNav = ({toggleBurger}) => (
     <>
-        <SiteNavList/>
+        <SiteNavList toggleBurger={toggleBurger} />
    </> 
 );
 

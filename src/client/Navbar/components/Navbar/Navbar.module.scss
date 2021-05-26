@@ -1,3 +1,5 @@
+@import ".././../../../shared/styles/style.scss";
+
 .nonBurger {
   display: none;
 }
@@ -7,53 +9,86 @@
     display: none;
   }
   .navigation {
-    display: flex;
-    justify-content: left;
-    align-items: center;
+    @include flex(_, center);
     margin-right: 40px;
     height: 100%;
   }
 }
-
+.user {
+  display: none;
+}
+.backdrop {
+  display: none;
+}
 @media screen and (max-width: 1079px) {
+  .navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 274px;
+    height: 100vh;
+    background-color: $primary-bg-color;
+    transform: translateX(0);
+    transition: all 500ms ease 0s;
+  }
+  .burgerClose {
+    transform: translateX(100%);
+    transition: all 500ms ease 0s;
+  }
   .container {
-    display: flex;
-    position: relative;
+    @include flex(_, center);
   }
   .burger {
-    stroke: #858598;
-    transform: translate(scale);
+    stroke: $secondary-text-color;
     transition-duration: 500ms;
     margin-right: 40px;
   }
   .burger:hover {
-    stroke: #000;
+    stroke: $primary-text-color;
+  }
+  .user {
+    @include flex(center, center);
+    margin-bottom: -50px;
   }
   .close {
     position: absolute;
     top: 10px;
     right: 10px;
+    height: 16px;
+    width: 16px;
     stroke: white;
   }
   .close:hover {
-    stroke: black;
+    stroke: $primary-text-color;
   }
-  .navigation {
+  .backdrop {
+    background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 0;
-    right: -193px;
-    width: 274px;
+    left: 0;
+    width: 100vw;
     height: 100vh;
-    background-color: #ffbc33;
+    display: block !important;
   }
 }
-@media screen and (max-width: 768px) {
-  .navigation {
-    right: -120px;
+@media screen and (min-width: 768px) {
+  .unAuth {
+    @include flex(_, center);
+    margin-right: 40px;
+    height: 100%;
+    background-color: transparent;
+    transform: translateX(0);
+  }
+  .burgerUnAuth {
+    display: none;
   }
 }
-@media screen and (max-width: 350px) {
-  .navigation {
-    right: -100px;
+@media screen and (max-width: 767px) {
+  .burger {
+    margin: 0;
+  }
+  .burgerUnAuth {
+    display: block;
+    stroke: $secondary-text-color;
   }
 }

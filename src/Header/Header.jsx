@@ -1,16 +1,17 @@
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
  
-
 import Navbar from '../client/Navbar/components/Navbar'
+import {ReactComponent as Logo } from '../images/Logo.svg'
 
 import styles from './Header.module.scss'
 
-const Header = ({isLoggedIn = true , scoreBalance = 0 }) => (
+
+const Header = ({isLoggedIn , scoreBalance = 0 }) => (
     <header className={styles.header}>
     <div className={styles.container}>
       <div className={styles.leftSide}>
-            <NavLink to='/' className={styles.logo}>LOGO</NavLink>
+            <NavLink to='/' className={styles.logo}>KidsLike <Logo className={styles.logoIcon} /> </NavLink>
             <div className={styles.scoreBalance} >
                 <p className={styles.text}>Баланс<br/> баллов:</p>
                 <span className={styles.score} >{scoreBalance}</span>
