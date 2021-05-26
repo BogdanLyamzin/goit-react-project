@@ -1,20 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AwardsPage from './pages/AwardsPage/AwardsPage';
-
-// import Routes from './routes'
+import Routes from './routes'
 // import Navbar from './client/Navba/Navbar';
 // import Footer from './Footer/Footer';
-
+// import AuthPage from './pages/AuthPage'
 
 function App() {
+
   return (
+
     <Router>
       <AwardsPage/>
-      {/* <Navbar />
+      {/* <Navbar /> */}
       <Routes />
-      <Footer /> */}
+      {/* <Footer /> */}
     </Router>
   );
-};
+}
+
 export default App;
