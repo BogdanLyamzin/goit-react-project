@@ -1,0 +1,47 @@
+.footerWrapper {
+  text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.08em;
+  color: #858598;
+}
+
+.footerText {
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  @media screen and (min-width: 480px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.footerKidslike {
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 480px) {
+    border-right: 1px solid #e3e2e7;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.footerYear {
+  @media screen and (min-width: 480px) {
+    border-left: 1px solid #e3e2e7;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.footerLogo {
+  margin-left: 4px;
+  vertical-align: middle;
+}
