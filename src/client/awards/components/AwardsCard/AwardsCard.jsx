@@ -1,28 +1,45 @@
-import React, { useState } from 'react';
-import { useSelector, shallowEqual } from 'react-redux';
-import {getAwards} from '../../../../redux/awards/awards-selectors';
+import React, { useState, useCallback } from 'react';
+import { useSelector, shallowEqual, useDispatch } from 'react-redux';
+import { getAwards } from '../../../../redux/awards/awards-selectors';
+import { buyGifts } from '../../../../redux/awards/awards-operations';
+
 import AwardsTitle from '../AwardsTitle';
 import Button from '../../../../shared/components/Button';
 import CheckboxToggle from '../../../../shared/components/CheckboxToggle';
 import Modal from '../../../../shared/components/Modal';
 import AwardsModal from '../AwardsModal';
+
 import styles from './AwardsCard.module.scss';
 
 const AwardsCard = () => {
-    const [openModal, setOpenModal] = useState(false);
-    const toggleModal = () => {
-        setOpenModal(!openModal);
-    };
-
+    const dispatch = useDispatch();
     const awards = useSelector(state => getAwards(state), shallowEqual);
 
-    const [selectAwards, setSelectAwards] = useState([]);
+    const [openModal, setOpenModal] = useState(false);
+    const toggleModal = useCallback(
+        () => {
+            setOpenModal(!openModal);
+        },
+        [openModal],
+    );
 
+    const [selectAwards, setSelectAwards] = useState([]);
     const addAward = (id) => {
         if (!selectAwards.includes(id)) {
-            setSelectAwards([...selectAwards, id])
+            setSelectAwards([...selectAwards, id]);
         }
     };
+
+     const handleSubmit = useCallback((e) => {
+        e.preventDefault();
+        if (selectAwards.length > 0) {
+          const awardsObject = {
+                giftIds: selectAwards
+            };
+            dispatch(buyGifts(awardsObject));
+        }
+        toggleModal();
+    }, [dispatch, selectAwards, toggleModal]);
 
     const awardsList = awards.map(({ id, title, price, imageUrl }) =>
         <li key={id} className={styles.item}>
@@ -53,10 +70,11 @@ const AwardsCard = () => {
         </div>
         {openModal && (
             <Modal onClose={toggleModal}>
-                <AwardsModal />
+                    {selectAwards.length > 0 ?
+                    <AwardsModal />
+                        : <div className={styles.noAwardsNotification}><p className={styles.textNotification}>Вы не выбрали ни одной награды!</p></div>}
             </Modal>)}
-        <Button type="submit" className={styles.button_confirm} onClick={toggleModal}> Подтвердить </Button>
-
+        <Button type="submit" className={styles.button_confirm} onClick={handleSubmit}> Подтвердить </Button>
         </div>
     )
 };
