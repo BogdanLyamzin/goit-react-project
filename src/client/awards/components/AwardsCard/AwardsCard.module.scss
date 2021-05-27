@@ -71,43 +71,6 @@
 	.container_main {
 		@include flex(space-between, stretch);
 	}
-	.rating {
-		display: block;
-	}
-	.text {
-		font-weight: 500;
-		font-size: 12px;
-		line-height: 1.22;
-		color: $third-text-color;
-		text-align: end;
-
-		&:not(:last-child) {
-			margin-top: 10px;
-		}
-	}
-
-	.number_bold {
-		font-weight: 700;
-		font-size: 12px;
-		line-height: 1.22;
-		color: $primary-text-color;
-	}
-	.number_rate {
-		font-weight: 700;
-		font-size: 12px;
-		line-height: 1.22;
-		color: $primary-text-color;
-		margin-right: 19px;
-	}
-	.number {
-		font-weight: 400;
-		font-size: 12px;
-		line-height: 1.21;
-		color: $primary-text-color;
-	}
-	.rate_line {
-		width: 280px;
-	}
 }
 @include desktop {
 	.container_awards {
