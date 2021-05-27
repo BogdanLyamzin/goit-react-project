@@ -13,7 +13,9 @@ function App() {
   return (
     <Router>
       <AuthPage />
+
       <AwardsPage />
+
       <Navbar />
       <Routes />
       <Footer />
