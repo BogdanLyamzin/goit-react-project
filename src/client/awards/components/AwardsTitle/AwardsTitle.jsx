@@ -1,11 +1,13 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import { ReactComponent as Gift } from '../../../../images/Gift.svg';
+import styles from './AwardsTitle.module.scss';
 
 const AwardsTitle = () => {
     return (
-        <>
-            <NavLink to="/awards">Награды</NavLink>
-        </>
+       <div className={styles.container_title}>
+        <Gift/>
+        <h2 className={styles.title}>Мои призы</h2>
+        </div> 
     )
 };
 
