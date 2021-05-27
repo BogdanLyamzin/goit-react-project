@@ -1,17 +1,23 @@
+import { v4 } from 'uuid'
+
 export default [
     {
         page: "Главная",
-        to: "/"
+        to: "/",
+        id: `${v4()}`
     },
     {
         page: "Планирование",
-        to: "/planning"
+        to: "/planning",
+        id: `${v4()}`
     },
         {
         page: "Награды",
-        to: "/awards"
+            to: "/awards",
+        id: `${v4()}`
     },    {
         page: "Контакты",
-        to: "/contacts"
+        to: "/contacts",
+        id: `${v4()}`
     }
 ]
