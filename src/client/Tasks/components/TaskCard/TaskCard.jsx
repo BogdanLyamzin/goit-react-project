@@ -1,12 +1,13 @@
-import React from 'react'
+
 import PropTypes from 'prop-types';
 import moment from 'moment'
 import { ReactComponent as Completed } from '../../../../images/completed.svg'
 import { ReactComponent as Incompleted } from '../../../../images/incompleted.svg'
 
+
 import styles from './TaskCard.module.scss'
 
-const TaskCard = ({ title, reward, imageUrl, date, isCompleted, toggleCompleted }) => {
+const TaskCard = ({ title, reward, imageUrl, date, isCompleted, toggleCompleted}) => {
 
     const today = moment().format('YYYY-MM-DD');
     const expiredDate = today > date;
@@ -26,6 +27,7 @@ const TaskCard = ({ title, reward, imageUrl, date, isCompleted, toggleCompleted 
                 <div>
                     {expiredDate && isCompleted && <Completed />}
                     {expiredDate && !isCompleted && <Incompleted />}
+
                 </div>
             </div>
         </li>
