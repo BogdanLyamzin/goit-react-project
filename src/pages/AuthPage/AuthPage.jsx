@@ -18,7 +18,6 @@ const AuthPage = () => {
     return (
         <>
             <section>
-                <NewTask/>
                 <div  className="container">
                 <div className={s.wrapper}>
                 <div className={s.containerFoto }>
