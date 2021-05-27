@@ -4,21 +4,17 @@ class AuthService extends BaseHttpService {
 
   async register (body) {
     try {
-      const {data} = await this.post('/auth/register', body);
-        this.saveToken(data.token);
+      const data = await this.post('auth/register', body);
         return data;
     } catch (error) {
-
     }
   }
 
   async logIn (body) {
     try {
-      const { data } = await this.post('/auth/login', body);
-      this.saveToken(data.token)
- return data;
+      const data = await this.post('auth/login', body);
+      return data;
     } catch (error) {
-      
     }
   };
 }
