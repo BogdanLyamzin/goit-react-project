@@ -4,3 +4,7 @@ export const fetchAwardsRequest = createAction('awards/fetchAwardsRequest');
 export const fetchAwardsSuccess = createAction('awards/fetchAwardsSuccess');
 export const fetchAwardsError = createAction('awards/fetchAwardsError');
 
+export const buyAwardsRequest = createAction('awards/buyAwardsRequest');
+export const buyAwardsSuccess = createAction('awards/buyAwardsSuccess');
+export const buyAwardsError = createAction('awards/buyAwardsError');
+

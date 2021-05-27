@@ -1,1 +1,1 @@
-export const getAwards = state => state.awards.items;
+export const getAwards = state => state.awards.awards.gifts;

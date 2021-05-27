@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useSelector, shallowEqual } from 'react-redux';
 import {getAwards} from '../../../../redux/awards/awards-selectors';
 import AwardsTitle from '../AwardsTitle';
@@ -9,6 +9,14 @@ import styles from './AwardsCard.module.scss';
 const AwardsCard = () => {
     const awards = useSelector(state => getAwards(state), shallowEqual);
 
+    const [selectAwards, setSelectAwards] = useState([]);
+
+    const addAward = (id) => {
+        if (!selectAwards.includes(id)) {
+            setSelectAwards([...selectAwards, id])
+        }
+    };
+
     const awardsList = awards.map(({ id, title, price, imageUrl }) =>
         <li key={id} className={styles.item}>
             <img src={imageUrl} alt={title} className={styles.image}/>
@@ -17,7 +25,7 @@ const AwardsCard = () => {
             <h3 className={styles.gift_name}>{title}</h3>
             <span className={styles.price}>{price} баллов</span>
             </div>
-            <div className={styles.container_checkboxtoggle}> <CheckboxToggle className={styles.checkbox_toggle}/></div> 
+                <div className={styles.container_checkboxtoggle}> <CheckboxToggle onChange={()=>addAward(id)} className={styles.checkbox_toggle} /></div>
             </div>
             </li> )
     return (
@@ -28,15 +36,15 @@ const AwardsCard = () => {
                 {/* <div className={styles.rating}>
                     <p className={styles.text}>Заработано баллов за эту неделю: <span className={styles.number_bold}>8</span></p>
                     <p className={styles.text}>Запланированно баллов на эту неделю: <span className={styles.number_bold}>16</span></p>
-                    <span className={styles.number_rate}>8 <span className={styles.number}>/ 16</span></span> 
+                    <span className={styles.number_rate}>8 <span className={styles.number}>/ 16</span></span>
                     <progress className={styles.rate_line} value='0' max='100'></progress>
                 </div> */}
             </div>
             <ul className={styles.list}>
                  {awardsList}
             </ul>
-            </div> 
-         <Button className={styles.button_confirm}> Подтвердить </Button>   
+            </div>
+         <Button className={styles.button_confirm}> Подтвердить </Button>
         </div>
     )
 };
