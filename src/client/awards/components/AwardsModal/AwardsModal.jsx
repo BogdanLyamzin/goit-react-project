@@ -1,22 +1,25 @@
 import { useSelector, shallowEqual } from 'react-redux';
-import { getAwards } from '../../../../redux/awards/awards-selectors';
+import { getAwards, getSelectedAwards } from '../../../../redux/awards/awards-selectors';
 
 import cat from './images/cat.png';
 
 import styles from './AwardsModal.module.scss';
 
 const RewardModal = () => {
-    const awards = useSelector((state => getAwards(state)), shallowEqual);
+    const allAwards = useSelector((state => getAwards(state)), shallowEqual);
+    const selectedAwardsID = useSelector((state => getSelectedAwards(state)), shallowEqual);
 
-    const itemElements = awards.map(item => (
+    const itemElements = allAwards.map(item => {
+        if (selectedAwardsID.includes(item.id)) {
+            return (
         <li key={item.id}>
-            <div className={styles.rewardImg}>
-                <img src={item.imageUrl} alt="" className={styles.reward} />
-            </div>
+                <div className={styles.rewardImg}>
+                    <img src={item.imageUrl} alt="" className={styles.reward} />
+                </div>
             <p className={styles.rewardTitle}>{item.title}</p>
-        </li>
-    ))
-
+        </li>)
+        }
+    })
 
     return (
         <div className={styles.modalContainer}>

@@ -1,20 +1,45 @@
-import React, { useState } from 'react';
-import { useSelector, shallowEqual } from 'react-redux';
-import {getAwards} from '../../../../redux/awards/awards-selectors';
+import React, { useState, useCallback } from 'react';
+import { useSelector, shallowEqual, useDispatch } from 'react-redux';
+import { getAwards } from '../../../../redux/awards/awards-selectors';
+import { buyGifts } from '../../../../redux/awards/awards-operations';
+
 import AwardsTitle from '../AwardsTitle';
 import Button from '../../../../shared/components/Button';
 import CheckboxToggle from '../../../../shared/components/CheckboxToggle';
 import Modal from '../../../../shared/components/Modal';
 import AwardsModal from '../AwardsModal';
+
 import styles from './AwardsCard.module.scss';
 
 const AwardsCard = () => {
+    const dispatch = useDispatch();
+    const awards = useSelector(state => getAwards(state), shallowEqual);
+
     const [openModal, setOpenModal] = useState(false);
-    const toggleModal = () => {
-        setOpenModal(!openModal);
+    const toggleModal = useCallback(
+        () => {
+            setOpenModal(!openModal);
+        },
+        [openModal],
+    );
+
+    const [selectAwards, setSelectAwards] = useState([]);
+    const addAward = (id) => {
+        if (!selectAwards.includes(id)) {
+            setSelectAwards([...selectAwards, id]);
+        }
     };
 
-    const awards = useSelector(state => getAwards(state), shallowEqual);
+     const handleSubmit = useCallback((e) => {
+        e.preventDefault();
+        if (selectAwards.length > 0) {
+          const awardsObject = {
+                giftIds: selectAwards
+            };
+            dispatch(buyGifts(awardsObject));
+        }
+        toggleModal();
+    }, [dispatch, selectAwards, toggleModal]);
 
     const awardsList = awards.map(({ id, title, price, imageUrl }) =>
         <li key={id} className={styles.item}>
@@ -24,7 +49,7 @@ const AwardsCard = () => {
             <h3 className={styles.gift_name}>{title}</h3>
             <span className={styles.price}>{price} баллов</span>
             </div>
-            <div className={styles.container_checkboxtoggle}> <CheckboxToggle className={styles.checkbox_toggle}/></div>
+                <div className={styles.container_checkboxtoggle}> <CheckboxToggle onChange={()=>addAward(id)} className={styles.checkbox_toggle} /></div>
             </div>
         </li> )
     return (
@@ -35,7 +60,7 @@ const AwardsCard = () => {
             {/* <div className={styles.rating}>
             <p className={styles.text}>Заработано баллов за эту неделю: <span className={styles.number_bold}>{currentPoints}</span></p>
             <p className={styles.text}>Запланированно баллов на эту неделю: <span className={styles.number_bold}>{setPoints}</span></p>
-                    <span className={styles.number_rate}>{currentPoints}<span className={styles.number}>/ {setPoints}</span></span> 
+                    <span className={styles.number_rate}>{currentPoints}<span className={styles.number}>/ {setPoints}</span></span>
                     <progress className={styles.rate_line} value='0' max='100'></progress>
                 </div> */}
             </div>
@@ -45,9 +70,11 @@ const AwardsCard = () => {
         </div>
         {openModal && (
             <Modal onClose={toggleModal}>
-                <AwardsModal />
+                    {selectAwards.length > 0 ?
+                    <AwardsModal />
+                        : <div className={styles.noAwardsNotification}><p className={styles.textNotification}>Вы не выбрали ни одной награды!</p></div>}
             </Modal>)}
-        <Button type="submit" className={styles.button_confirm} onClick={toggleModal}> Подтвердить </Button>
+        <Button type="submit" className={styles.button_confirm} onClick={handleSubmit}> Подтвердить </Button>
         </div>
     )
 };
