@@ -3,7 +3,7 @@ import { v4 } from 'uuid';
 
 import styles from './FormCheckbox.module.scss'
 
-const FormCheckbox = ({ label, className, ...checkboxProps}) => {
+const FormCheckbox = ({ label, className, onChange,...checkboxProps}) => {
     const id = v4();
 
     return (
@@ -13,8 +13,8 @@ const FormCheckbox = ({ label, className, ...checkboxProps}) => {
             </div>
             
           <div className={styles.checkbox}>
-            <input id={id} className={ `${styles.checkboxInputHidden} ${className}`} type="checkbox" {...checkboxProps} />
-            <span aria-hidden="true" className={styles.checkboxInput} >
+                <input id={id} className={`${styles.checkboxInputHidden} ${className}`} type="checkbox"  {...checkboxProps} />
+                <span aria-hidden="true" className={styles.checkboxInput} onClick={onChange} >
                 <span className={styles.checkboxIcon}></span>
             </span>
           </div>

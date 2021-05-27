@@ -1,20 +1,39 @@
-.planningPointsText{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.25;
-    color: #A6ABB9
+@import "src/shared/styles/_base";
+@import "../../../../shared/styles/style.scss";
+@import "../../../../shared/styles/common";
 
-}
+.planningPoints {
+  &Text {
+    display: none;
+  }
 
-.planningPointsNumber{
-    width: 30px;
-    height: 30px;
-    background: #8EC63F;
-    border-radius: 50%;
-    padding: 6px 7px;
-    font-size: 14px;
-    line-height: 1.21;
-    letter-spacing: 0.04em;
-    color: #FFFFFF;
+  @include tablet {
+    &Text {
+      display: block;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.25px;
+      letter-spacing: 0.04em;
+      color: #a6abb9;
+      margin-bottom: 37px;
+    }
+    @include desktop {
+      &Text {
+        margin-bottom: 0;
+      }
+    }
+    &Number {
+      width: 30px;
+      height: 30px;
+      background: #8ec63f;
+      border-radius: 50%;
+      display: inline-block;
+      padding-top: 7px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.21;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+    }
+  }
 }

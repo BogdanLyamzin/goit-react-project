@@ -1,22 +1,25 @@
+import { useState } from 'react'
+
+
+import { dayList } from './list'
 import FormCheckbox from '../../../../shared/components/FormCheckbox'
 import styles from './DaysList.module.scss'
 
-const DaysList=() =>{
-const dayList=[
-    { "days": "Пн"},
-    { "days": "Вт" },
-    { "days": "Ср"},
-    { "days": "Чт" },
-    { "days": "Пт" },
-    { "days": "Сб" },
-    { "days": "Вс"}
-  ]
+const dayStatus = Array(7).fill(false)
 
-  const dayWeek=dayList.map(({days})=> <FormCheckbox label={days}/>)
+const DaysList = () => {
+  const [dayStatusList, setDayStatusList] = useState(dayStatus)
 
+  const handleCheck = (idx) => {
+    const arr = [...dayStatusList];
+    arr[idx] = !arr[idx];
+    setDayStatusList(arr)
+  };
+
+  const dayWeek = dayList.map(({ days, name }, idx) => <FormCheckbox key={name } label={days} name={name} checked={dayStatusList[idx]} onChange={()=>handleCheck(idx)}/>)
     return (
         <div className={styles.checkboxList}>
-            {dayWeek}
+            {dayWeek }
         </div>
         )
 };

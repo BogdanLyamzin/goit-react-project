@@ -9,15 +9,9 @@ import App from './App';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-<<<<<<< HEAD
-      {/* <Provider store={store}> */}
-=======
-
-    <Provider store={store}> 
-   <Provider store={store}>
->>>>>>> 58c4ce594db9e3d232059b09b40fc2cf59611077
+    {/* <Provider store={store}> */}
         <App />
-      </Provider> 
+    {/* </Provider>  */}
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
