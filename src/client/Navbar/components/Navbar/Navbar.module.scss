@@ -1,12 +1,11 @@
-@import ".././../../../shared/styles/style.scss";
+@import ".././../../../shared/styles/style";
 
 @include desktop {
   .burger {
     display: none;
   }
   .navigation {
-    @include flex(_, center);
-    margin-right: 40px;
+    @include flex(flex-start, center);
     height: 100%;
   }
 }
@@ -27,20 +26,19 @@
     transform: translateX(0);
     transition: all 500ms ease 0s;
   }
-  .burgerClose {
-    transform: translateX(100%);
-    transition: all 500ms ease 0s;
-  }
-  .container {
-    @include flex(_, center);
+  .wrapper {
+    @include flex(flex-start, center);
   }
   .burger {
     stroke: $secondary-text-color;
     transition-duration: 500ms;
-    margin-right: 40px;
 
     &:hover {
       stroke: $primary-text-color;
+    }
+    &Close {
+      transform: translateX(100%);
+      transition: all 500ms ease 0s;
     }
   }
   .user {
@@ -70,9 +68,9 @@
     display: block !important;
   }
 }
-@include tablet {
+@media screen and (min-width: 768px) {
   .unAuth {
-    @include flex(_, center);
+    @include flex(flex-start, center);
     height: 100%;
     background-color: transparent;
     transform: translateX(0);
@@ -84,9 +82,10 @@
 @media screen and (max-width: 767px) {
   .burger {
     margin: 0;
-  }
-  .burgerUnAuth {
-    display: block;
-    stroke: $secondary-text-color;
+
+    &UnAuth {
+      display: block;
+      stroke: $secondary-text-color;
+    }
   }
 }

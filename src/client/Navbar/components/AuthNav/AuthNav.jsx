@@ -2,10 +2,10 @@ import { NavLink } from "react-router-dom";
 
 import styles from './AuthNav.module.scss'
 
-const AuthNav = () => (
+const AuthNav = ({toggleBurger}) => (
     <div className={styles.navigation}>
-        <NavLink to='/login' className={styles.link} activeClassName={styles.active}>Авторизоваться</NavLink>
-        <NavLink to='/contacts'className={styles.link} activeClassName={styles.active}>Контакты</NavLink>
+        <NavLink to='/login' className={styles.link} activeClassName={styles.active} onClick={toggleBurger}>Авторизоваться</NavLink>
+        <NavLink to='/contacts'className={styles.link} activeClassName={styles.active} onClick={toggleBurger}>Контакты</NavLink>
     </div>
 );
 
