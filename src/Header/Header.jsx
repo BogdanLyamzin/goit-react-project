@@ -1,34 +1,38 @@
 import { useSelector } from 'react-redux';
 
 import Navbar from '../client/navbar/components/Navbar'
-import Logo from '../Logo'
+import Logo from '../shared/components/Logo'
+import {getIsAuthenticated} from '../redux/auth/selectors'
 
 import styles from './Header.module.scss'
 
 
-const Header = ({isLoggedIn , scoreBalance = 0 }) => (
-    <header className={styles.header}>
-    <div className={`${styles.container} ${styles.headerContainer}`}>
-      <div className={styles.leftSide}>
-            <Logo/>
-            <div className={styles.scoreBalance} >
-                <p className={styles.text}>Баланс<br/> баллов:</p>
-                <span className={styles.score} >{scoreBalance}</span>
-            </div>
-      </div>
-      <div className={styles.rightSide}>
-          <Navbar />
-          { isLoggedIn &&  
-          <div className={styles.userContainer}>     
-                <h2>User</h2>
-                <button>logout</button>
-          </div>
-          }
-      </div>
-    </div>
-    </header>
-);
+const Header = ({scoreBalance = 0 }) => {
+  const isAuthorized = useSelector(getIsAuthenticated)
 
+  return (
+    <header className={styles.header}>
+      <div className={`${styles.container} ${styles.headerContainer}`}>
+        <div className={styles.leftSide}>
+          <Logo />
+          <div className={styles.scoreBalance} >
+            <p className={styles.text}>Баланс<br /> баллов:</p>
+            <span className={styles.score} >{scoreBalance}</span>
+          </div>
+        </div>
+        <div className={styles.rightSide}>
+          <Navbar />
+          {isAuthorized &&
+            <div className={styles.userContainer}>
+              <h2>User</h2>
+              <button>logout</button>
+            </div>
+          }
+        </div>
+      </div>
+    </header>
+  );
+}
 export default Header;
 
 /*<header class="header">
