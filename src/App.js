@@ -4,12 +4,12 @@ import AwardsPage from './pages/AwardsPage/AwardsPage';
 import Routes from './routes'
 import AuthPage from './pages/AuthPage'
 import Footer from "./client/Footer/components/Footer";
-// import Footer from "./Footer/components/Footer/Footer";
 
 import Loader from "./shared/components/Loader";
 
 function App() {
 
+  
   return (
     <Router>
       <AuthPage />
