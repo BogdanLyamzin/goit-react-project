@@ -1,6 +1,5 @@
 import React from 'react';
 import LoginForm from '../../client/LoginForm/components/LoginForm';
-import NewTask from '../../client/Tasks/components/NewTask'
 
 
 import family1 from './images/family1.png';
@@ -18,7 +17,6 @@ const AuthPage = () => {
     return (
         <>
             <section>
-                <NewTask/>
                 <div  className="container">
                 <div className={s.wrapper}>
                 <div className={s.containerFoto }>

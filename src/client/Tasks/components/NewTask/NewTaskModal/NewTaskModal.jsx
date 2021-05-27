@@ -1,5 +1,5 @@
 import React, {useCallback} from 'react';
-// import { useDispatch } from 'react-redux';
+import {useDispatch} from 'react-redux';
 
 
 import Button from '../../../../../shared/components/Button';
@@ -9,17 +9,16 @@ import { initialState } from './initialState';
 import useForm from '../../../../../shared/hooks/useForm';
 import newTaskFoto from './images/newTaskFoto.png'
 import { ReactComponent as LogoSvg } from './images/newTaskLogo.svg';
-import { ReactComponent as EditSvg } from './images/edit.svg'
+import { ReactComponent as EditSvg } from './images/edit.svg';
+import {addTask} from '../../../../../redux/tasks/tasks-operations'
 
 import s from './NewTaskModal.module.scss';
 
-const addNewTask = () => { };
-const dispatch = () => { };
 
 const NewTaskModal = () => {
 
-    // const dispatch = useDispatch();
-    const onSubmit = useCallback((data) => dispatch(addNewTask(data)), [dispatch]);
+    const dispatch = useDispatch();
+    const onSubmit = useCallback((data) => dispatch(addTask(data)), [dispatch]);
     const [data, , handleChange, handleSubmit] = useForm({ initialState, onSubmit });
 
 
@@ -43,7 +42,7 @@ const NewTaskModal = () => {
                         <FormInput {...fields.reward} value={data.reward} onChange={handleChange} className={s.input} />
                     </div>
                     <div className={s.buttonContainer}>
-                    <Button type="submit" className={s.button} onClick={() => {}}>Ок</Button>
+                    <Button type="submit" className={s.button}>Ок</Button>
                     </div>
                 </form>
                 </div>

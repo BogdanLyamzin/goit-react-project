@@ -32,10 +32,10 @@ const AwardsCard = () => {
             <div className={styles.container_awards}>
             <div className={styles.container_main}>
              <AwardsTitle/>
-                {/* <div className={styles.rating}>
-                    <p className={styles.text}>Заработано баллов за эту неделю: <span className={styles.number_bold}>8</span></p>
-                    <p className={styles.text}>Запланированно баллов на эту неделю: <span className={styles.number_bold}>16</span></p>
-                    <span className={styles.number_rate}>8 <span className={styles.number}>/ 16</span></span>
+            {/* <div className={styles.rating}>
+            <p className={styles.text}>Заработано баллов за эту неделю: <span className={styles.number_bold}>{currentPoints}</span></p>
+            <p className={styles.text}>Запланированно баллов на эту неделю: <span className={styles.number_bold}>{setPoints}</span></p>
+                    <span className={styles.number_rate}>{currentPoints}<span className={styles.number}>/ {setPoints}</span></span> 
                     <progress className={styles.rate_line} value='0' max='100'></progress>
                 </div> */}
             </div>

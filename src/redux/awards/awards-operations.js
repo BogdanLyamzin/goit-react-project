@@ -1,17 +1,17 @@
-import axios from 'axios';
+import AwardsService from './awards-service';
 import { fetchAwardsRequest, fetchAwardsSuccess, fetchAwardsError } from './awards-actions';
 
-axios.defaults.baseURL = 'https://kidslike-v1-backend.goit.global';
-axios.defaults.headers.common.Authorization = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MGFlMDIxZjY2MmVmOTAwMTdlZDZmY2MiLCJzaWQiOiI2MGFlMDMxNzY2MmVmOTAwMTdlZDZmY2YiLCJpYXQiOjE2MjIwMTY3OTF9.X8rEnsOrOi0WQ-hcbs7aCYfT4jeaGAdI2Sg2EetjWM4';
+const awardsService = new AwardsService();
 
-const fetchAwards = () => async dispatch => {
+export const fetchAwards = () => async dispatch => {
     dispatch(fetchAwardsRequest());
     try {
-        const response = await axios.get('/gift');
-        dispatch(fetchAwardsSuccess(response.data.ruGifts))
+        const data = await awardsService.get('gift');
+        console.log(data);
+        dispatch(fetchAwardsSuccess(data.ruGifts))
     } catch (error) {
         dispatch(fetchAwardsError(error.message));
     }
 }
-
 export default fetchAwards;
+
