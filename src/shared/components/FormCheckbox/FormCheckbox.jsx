@@ -3,15 +3,18 @@ import { v4 } from 'uuid';
 
 import styles from './FormCheckbox.module.scss'
 
-const FormCheckbox = ({ label, className, ...checkboxProps}) => {
+const FormCheckbox = ({ label, className, onChange,...checkboxProps}) => {
     const id = v4();
 
     return (
-        <div className="formGroup">
-            {label && <label htmlFor={id}>{label}</label> }
+        <div className={styles.formGroup}>
+            <div>
+                {label && <label htmlFor={id} className={styles.checkboxText}>{label}</label> }
+            </div>
+            
           <div className={styles.checkbox}>
-            <input id={id} className={ `${styles.checkboxInputHidden} ${className}`} type="checkbox" {...checkboxProps} />
-            <span aria-hidden="true" className={styles.checkboxInput} >
+                <input id={id} className={`${styles.checkboxInputHidden} ${className}`} type="checkbox"  {...checkboxProps} />
+                <span aria-hidden="true" className={styles.checkboxInput} onClick={onChange} >
                 <span className={styles.checkboxIcon}></span>
             </span>
           </div>
