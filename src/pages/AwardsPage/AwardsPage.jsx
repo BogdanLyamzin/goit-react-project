@@ -1,10 +1,20 @@
-import React from "react"
+import React, { useEffect } from "react";
+import { useDispatch } from 'react-redux';
+import  fetchAwards  from '../../redux/awards/awards-operations';
 import AwardsCard from '../../client/awards/components/AwardsCard';
 
-const AwardsPage = () => {
-  return <div>
+export default function AwardsPage() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAwards());
+    
+  }, [dispatch])
+
+  return (
+    <div>
     <AwardsCard/>
-  </div>
+    </div>
+  )
 }
 
-export default AwardsPage

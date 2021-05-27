@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import {useDispatch} from 'react-redux';
+// import {useDispatch} from 'react-redux';
 
+import {ReactComponent as GoggleSvg} from './google.svg'
 import Button from '../../../../shared/components/Button';
 import FormInput from '../../../../shared/components/FormInput';
 import { fields } from './fields';
@@ -33,7 +34,7 @@ export const LoginForm = () => {
           autoComplete="off"
       >
         <p className={s.title}>Вы можете авторизоваться с помощью Google Account:</p>
-        <Button type="submit" className={s.googleBtn}>Google</Button>
+        <Button type="submit" className={s.googleBtn}><GoggleSvg className={s.googleLogo}/>Google</Button>
         <p className={s.title}>Или зайти с помощью e-mail и пароля, предварительно зарегистрировавшись:</p>
         <FormInput {...fields.email} value={data.email} onChange={handleChange} className={s.input}/>
         <FormInput {...fields.password} value={data.password} onChange={handleChange} className={s.input}/>
