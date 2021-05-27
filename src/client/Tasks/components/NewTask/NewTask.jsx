@@ -14,7 +14,8 @@ const [openModal, setOpenModal] = useState(false)
             {openModal && (<Modal onClose={toggleModal}>
             <NewTaskModal/>
             </Modal>)}
-        <button type='button' className={s.newTaskBtn} onClick={toggleModal}></button>  
+            <button type='button' className={s.newTaskBtn} onClick={toggleModal}></button>
+            <button type='button' className={s.newTaskBtnMobile} onClick={toggleModal}></button> 
         </div>
     </>
 };

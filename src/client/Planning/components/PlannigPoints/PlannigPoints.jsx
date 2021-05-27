@@ -7,10 +7,12 @@ const PlannigPoints = () => {
     const [points, setPoints] = useState(0)
     
     return (
-        <>
-            <p className={styles.planningPointsText}>Определены задач на <span className={styles.planningPointsNumber}>{points}</span> баллов</p>
+        <div className={styles.plannigPointsWrapper}>
+            <p className={styles.planningPointsText}>Определены задач на</p>
+            <span className={styles.planningPointsNumber}>{points}</span>
+            <span className={styles.planningPoints}>баллов</span>
             
-        </>
+        </div>
     )
 };
 

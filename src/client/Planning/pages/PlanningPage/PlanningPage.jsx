@@ -1,9 +1,9 @@
-import { useState } from 'react'
 
 import CurrentPlanningWeek from '../../components/CurrentPlanningWeek'
 import PlannigPoints from '../../components/PlannigPoints'
 import TasksList from '../../../Tasks/components/TasksList'
-import PlanningTask from '../../components/PlanningTask'
+// import PlanningTask from '../../components/PlanningTask'
+import NewTask from '../../../Tasks/components/NewTask'
 import img from '../../Rectangle 25.jpg'
 
 import styles from './PlanningPage.module.scss'
@@ -11,22 +11,23 @@ import styles from './PlanningPage.module.scss'
     const tasks = [{ imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }]
 
 const PlanningPage = () => {
-    
-    const [points, setPoints] = useState(0)
-   
+
         return (
             <section className={styles.planningPage}>
                 <div className={styles.container}>
                     <div className={styles.planningPageContainer}>
                         <CurrentPlanningWeek />
-                        <PlannigPoints />
-                        <PlanningTask />
+                        <div className={styles.planningPageWrapper}>
+                            <PlannigPoints />
+                            <NewTask />
+                        </div>
+                        
                     </div>
                     <TasksList tasks={tasks}/>
                 </div>
-                <div className={styles.planningPageWrapper}>
-                    <p className={styles.planningPointsTextMobile}>Определены задач на <span className={styles.planningPointsNumberMobile}>{points}</span> баллов</p>
-                    <PlanningTask />
+                <div className={styles.planningPageWrapperMobile}>
+                    <PlannigPoints />
+                    <NewTask />
                 </div>
             </section>
         )
