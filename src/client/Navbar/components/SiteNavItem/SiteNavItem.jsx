@@ -11,14 +11,12 @@ const SiteNavItem = ({page, to, toggleBurger}) => (
 SiteNavItem.defaultProps = {
     page: '',
     to: '',
-    id: '',
     toggleBurger: () => {}
 }
 
 SiteNavItem.propTypes = {
     page: PropTypes.string,
     to: PropTypes.string,
-    id: PropTypes.string,
     toggleBurger: PropTypes.func,
 }
 

@@ -5,6 +5,7 @@
   height: 20px;
   font-weight: bold;
   color: $primary-text-color;
+  letter-spacing: 0.08em;
 
   &Link {
     @include flex();
@@ -14,8 +15,8 @@
   }
   &Icon {
     position: absolute;
-    top: -1px;
-    right: 13px;
+    top: -1PX;
+    right: 0;
     height: 18px;
     width: 13px;
     fill: $primary-bg-color;

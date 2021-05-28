@@ -1,4 +1,4 @@
-@import "../../../../../../shared/styles/style";
+@import "../../../../shared/styles/base";
 
 @include desktop {
   .link {
@@ -29,7 +29,6 @@
 }
 @media screen and (max-width: 1199px) {
   .link {
-    font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;

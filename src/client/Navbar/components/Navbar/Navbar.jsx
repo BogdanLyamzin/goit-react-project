@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 
-import SiteNav from '../SiteNav'
+import SiteNavList from '../SiteNavList'
 import AuthNav from '../AuthNav'
 import { ReactComponent as Burger } from './icons/menu.svg'
 import { ReactComponent as Close } from './icons/close.svg'
@@ -29,7 +29,7 @@ function Navbar() {
             </div>}
          <span className={styles.close}><Close onClick={toggleBurger}/></span>
         { isAuthorized ?
-            <SiteNav toggleBurger={toggleBurger}/> : <AuthNav toggleBurger={toggleBurger}/>}
+            <SiteNavList toggleBurger={toggleBurger}/> : <AuthNav toggleBurger={toggleBurger}/>}
         </div>
     </div>
     </>
