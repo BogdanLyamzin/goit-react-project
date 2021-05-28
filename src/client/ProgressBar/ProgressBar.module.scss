@@ -1,0 +1,100 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.points {
+  display: none;
+}
+
+.pointsMobile {
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 4%;
+  color: #a6abb9;
+}
+
+.progressBar {
+  position: relative;
+}
+
+.numberRate {
+  font-style: bold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.214;
+  letter-spacing: 20%;
+  color: #000000;
+}
+
+.number {
+  margin-left: 9px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.214;
+  letter-spacing: 20%;
+}
+
+.rateLine {
+  position: absolute;
+  top: 23px;
+  left: 69px;
+  width: 150px;
+  height: 6px;
+  color: #e0e0e0;
+}
+
+@media screen and (min-width: 767px) {
+  .progressBar {
+    display: block;
+    width: 349px;
+    height: 67px;
+  }
+
+  .pointsMobile {
+    display: none;
+  }
+
+  .points {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 4%;
+    color: #a6abb9;
+  }
+
+  .result {
+    margin-left: 13px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 20%;
+    color: #000000;
+  }
+
+  .rateLine {
+    top: 56px;
+    width: 280px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .progressBar {
+    display: block;
+    width: 343px;
+    height: 67px;
+  }
+
+  .points {
+    text-align: right;
+  }
+
+  .rateLine {
+    left: 63px;
+  }
+}
