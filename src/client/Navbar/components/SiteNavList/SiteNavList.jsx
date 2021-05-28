@@ -12,4 +12,12 @@ const SiteNavList = ({toggleBurger}) => {
     )
 }
 
+SiteNavList.defaultProps = {
+    toggleBurger: () => {}
+}
+
+SiteNavList.propTypes = {
+    toggleBurger: PropTypes.func,
+}
+
 export default SiteNavList;

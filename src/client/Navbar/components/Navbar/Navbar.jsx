@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { shallowEqual, useSelector } from "react-redux";
 
 import SiteNavList from '../SiteNavList'
 import AuthNav from '../AuthNav'
@@ -11,7 +11,7 @@ import styles from './Navbar.module.scss'
 
 function Navbar() {
     const [burger, setBurger] = useState(false)
-    const isAuthorized = useSelector(getIsAuthenticated)
+    const isAuthorized = useSelector(getIsAuthenticated, shallowEqual)
 
     const toggleBurger = () => {
         setBurger(prevState => !prevState)

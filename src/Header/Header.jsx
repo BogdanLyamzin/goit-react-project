@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { shallowEqual, useSelector } from 'react-redux';
 
 import Navbar from '../client/navbar/components/Navbar'
 import Logo from '../shared/components/Logo'
@@ -8,7 +8,7 @@ import styles from './Header.module.scss'
 
 
 const Header = ({scoreBalance = 0 }) => {
-  const isAuthorized = useSelector(getIsAuthenticated)
+  const isAuthorized = useSelector(getIsAuthenticated, shallowEqual)
 
   return (
     <header className={styles.header}>
