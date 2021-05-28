@@ -6,6 +6,7 @@ import Routes from './routes'
 import Navbar from './client/Navba/Navbar';
 import AuthPage from './pages/AuthPage'
 import Footer from './Footer/Footer';
+import ProgressBar from './client/ProgressBar'
 
 import PlanningPage from "./client/Planning/pages/PlanningPage"
 
@@ -15,11 +16,12 @@ function App() {
       <AuthPage />
 
       <AwardsPage />
-
+    <ProgressBar />
       <Navbar />
       <Routes />
-      <Footer />
+      <Footer />  
       <PlanningPage />
+      
     </Router>
   )
 }

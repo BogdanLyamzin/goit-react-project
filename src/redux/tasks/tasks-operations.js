@@ -1,3 +1,4 @@
+
 import actions from './tasks-actions';
 import TaskService from "./tasks-service";
 
@@ -12,6 +13,17 @@ export const addTask = body => async dispatch => {
   catch (error) {
     dispatch(actions.createTaskError(error))
   }
-}
+};
+
+export const fetchTasks = () => async dispatch => {
+  dispatch(actions.fetchTasksRequest())
+  try {
+    const { data } = await taskService.get('/user/info')
+    console.log(data);
+    dispatch(actions.fetchTasksSuccess(data))
+  } catch (error) {
+    dispatch(actions.fetchTasksError(error))
+  }
+};
 
 

@@ -10,6 +10,14 @@ class TaskService extends BaseHttpService {
     }
   }
 
-}
+  async fetchTasks() {
+    try {
+      const data = await this.get('task');
+        return data;
+    } catch (error) {
+      
+    }
+  }
+};
 
 export default TaskService
