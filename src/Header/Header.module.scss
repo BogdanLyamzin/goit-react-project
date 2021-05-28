@@ -27,7 +27,6 @@ ul {
 }
 
 .text {
-  font-style: normal;
   font-weight: 500;
   margin-right: 10px;
   font-size: 12px;
@@ -38,7 +37,6 @@ ul {
 }
 .score {
   @include flex(flex-start, center);
-  font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 17px;

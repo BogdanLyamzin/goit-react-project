@@ -24,7 +24,7 @@
   }
   .active {
     @extend .link;
-    color: primary-text-color;
+    color: $primary-text-color;
     .navigation {
       @include flex(flex-start, center);
       border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -47,7 +47,7 @@
     color: #ffffff;
   }
   .active {
-    color: primary-text-color;
+    color: $primary-text-color;
   }
   .navigation {
     margin-top: 80px !important;
