@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import SiteNavItem from '../SiteNavItem'
 import SiteNavItems from '../SiteNavItems'
 
