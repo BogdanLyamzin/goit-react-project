@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom'
-import { ReactComponent as LogoSite } from '../../../images/Logo.svg';
+import { ReactComponent as LogoIcon } from '../../../images/Logo.svg';
 
 import styles from './Logo.module.scss'
 
-const Logo = () => {
+function Logo() {
     return (
-            <Link to='/' className={styles.logo}>
-                <span className={styles.text}>KidsLike</span>
-                <LogoSite className={styles.img}/>
-            </Link>
+        <Link to='/'className={styles.logoLink} >
+            <p className={styles.logo}>KidsLike</p>
+            <LogoIcon className={styles.logoIcon} />
+        </Link>
     )
 }
 
-export default Logo
+export default Logo;
