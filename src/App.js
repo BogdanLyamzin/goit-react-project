@@ -1,26 +1,18 @@
+import {BrowserRouter as Router} from "react-router-dom";
 
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import AwardsPage from './pages/AwardsPage/AwardsPage';
-import Routes from './routes'
-import Navbar from './client/Navba/Navbar';
-import AuthPage from './pages/AuthPage'
-import Footer from './Footer/Footer';
+import Routes from "./Routes";
+import Header from './client/Header/components/Header'
+import Footer from "./client/Footer/components/Footer";
 
-import PlanningPage from "./client/Planning/pages/PlanningPage"
+import "./shared/styles/style.scss"
 
 function App() {
   return (
-    <Router>
-      <AuthPage />
-
-      <AwardsPage />
-
-      <Navbar />
-      <Routes />
-      <Footer />
-      <PlanningPage />
-    </Router>
+      <Router>
+          <Header />
+          <Routes />
+          <Footer />
+      </Router>
   )
 }
 export default App
