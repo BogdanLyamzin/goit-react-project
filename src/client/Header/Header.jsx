@@ -1,8 +1,8 @@
 import { shallowEqual, useSelector } from 'react-redux';
 
-import Navbar from '../client/navbar/components/Navbar'
-import Logo from '../shared/components/Logo'
-import {getIsAuthenticated} from '../redux/auth/selectors'
+import Navbar from '../Navbar/components/Navbar'
+import Logo from '../../shared/components/Logo'
+import {getIsAuthenticated} from '../../redux/auth/selectors'
 
 import styles from './Header.module.scss'
 

@@ -1,5 +1,5 @@
 import Routes from "./Routes";
-import Header from './Header'
+import Header from './client/Header'
 // import Navbar from './client/Navba/Navbar';
 // import Footer from './Footer/Footer';
 import "./shared/styles/style.scss"
