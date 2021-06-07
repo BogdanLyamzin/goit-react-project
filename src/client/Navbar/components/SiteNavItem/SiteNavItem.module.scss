@@ -1,4 +1,4 @@
-@import "../../../../shared/styles/base";
+@import "src/shared/styles/base";
 
 @include desktop {
   .link {
@@ -20,11 +20,11 @@
       padding-right: 15px;
       margin-right: 15px;
     }
+    &.active {
+      color: $primary-text-color;
+    }
   }
-  .active {
-    @extend .link;
-    color: $primary-text-color;
-  }
+
 }
 @media screen and (max-width: 1199px) {
   .link {

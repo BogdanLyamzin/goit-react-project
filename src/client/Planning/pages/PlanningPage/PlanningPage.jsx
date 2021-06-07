@@ -11,7 +11,7 @@ import styles from './PlanningPage.module.scss'
     const tasks = [{ imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }]
 
 const PlanningPage = () => {
-
+console.log()
         return (
             <section className={styles.planningPage}>
                 <div className={styles.container}>

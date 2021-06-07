@@ -5,11 +5,11 @@ import SiteNavList from '../SiteNavList'
 import AuthNav from '../AuthNav'
 import { ReactComponent as Burger } from './icons/menu.svg'
 import { ReactComponent as Close } from './icons/close.svg'
-import {getIsAuthenticated} from '../../../../redux/auth/selectors'
+import {getIsAuthenticated} from '../../../../redux/auth/selectors';
 
 import styles from './Navbar.module.scss'
 
-function Navbar() {
+const Navbar = () => {
     const [burger, setBurger] = useState(false)
     const isAuthorized = useSelector(getIsAuthenticated, shallowEqual)
 

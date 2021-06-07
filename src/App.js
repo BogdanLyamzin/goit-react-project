@@ -1,18 +1,18 @@
+import {BrowserRouter as Router} from "react-router-dom";
+
 import Routes from "./Routes";
-import Header from './client/Header'
+import Header from './client/Header/components/Header'
 import Footer from "./client/Footer/components/Footer";
 
-// import Navbar from './client/Navba/Navbar';
-// import Footer from './Footer/Footer';
 import "./shared/styles/style.scss"
 
 function App() {
   return (
-      <>
-          {/*<Navbar />*/}
+      <Router>
+          <Header />
           <Routes />
-          {/*<Footer />*/}
-      </>
+          <Footer />
+      </Router>
   )
 }
 export default App

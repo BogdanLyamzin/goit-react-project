@@ -1,7 +1,12 @@
-import React from "react"
+import {getIsAuthenticated} from "../../redux/auth/selectors";
+import {Redirect} from "react-router-dom";
+import {shallowEqual, useSelector} from "react-redux";
 
 const MainPage = () => {
-  return <div></div>
+  const isAuthorized = useSelector(getIsAuthenticated, shallowEqual);
+  if(!isAuthorized){
+    return <Redirect to="/auth" />
+  }
 }
 
 export default MainPage
