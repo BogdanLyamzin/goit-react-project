@@ -12,7 +12,7 @@ export const store = configureStore({
    reducer: {
       auth: authReducer,
       awards: awardsReducer,
-      task: tasksNewReducer
+      tasks: tasksNewReducer
 },
    middleware,
    devTools: process.env.NODE_ENV === 'development',

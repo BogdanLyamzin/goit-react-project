@@ -1,4 +1,3 @@
-
 import CurrentPlanningWeek from '../../components/CurrentPlanningWeek'
 import PlannigPoints from '../../components/PlannigPoints'
 import TasksList from '../../../Tasks/components/TasksList'
@@ -7,30 +6,35 @@ import NewTask from '../../../Tasks/components/NewTask'
 import img from '../../Rectangle 25.jpg'
 
 import styles from './PlanningPage.module.scss'
+import {useSelector, shallowEqual} from "react-redux";
 
-    const tasks = [{ imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }, { imageUrl: img, reward: 5 }]
+const tasks = [{imageUrl: img, reward: 5}, {imageUrl: img, reward: 5}, {imageUrl: img, reward: 5}, {
+    imageUrl: img,
+    reward: 5
+}, {imageUrl: img, reward: 5}, {imageUrl: img, reward: 5}, {imageUrl: img, reward: 5}, {imageUrl: img, reward: 5}]
 
 const PlanningPage = () => {
-console.log()
-        return (
-            <section className={styles.planningPage}>
-                <div className={styles.container}>
-                    <div className={styles.planningPageContainer}>
-                        <CurrentPlanningWeek />
-                        <div className={styles.planningPageWrapper}>
-                            <PlannigPoints />
-                            <NewTask />
-                        </div>
-                        
+    const {tasks: allTasks} = useSelector(({tasks}) => tasks, shallowEqual);
+
+    return (
+        <section className={styles.planningPage}>
+            <div className={styles.container}>
+                <div className={styles.planningPageContainer}>
+                    <CurrentPlanningWeek/>
+                    <div className={styles.planningPageWrapper}>
+                        <PlannigPoints tasks={allTasks}/>
+                        <NewTask/>
                     </div>
-                    <TasksList tasks={tasks}/>
+
                 </div>
-                <div className={styles.planningPageWrapperMobile}>
-                    <PlannigPoints />
-                    <NewTask />
-                </div>
-            </section>
-        )
+                <TasksList tasks={allTasks}/>
+            </div>
+            <div className={styles.planningPageWrapperMobile}>
+                <PlannigPoints/>
+                <NewTask/>
+            </div>
+        </section>
+    )
 };
 
 export default PlanningPage;

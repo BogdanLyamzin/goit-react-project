@@ -8,7 +8,6 @@ import styles from './Header.module.scss'
 
 const Header = ({scoreBalance = 0 }) => {
   const user = useSelector(getUser, shallowEqual);
-  console.log(user)
 
   return (
     <header className={styles.header}>
