@@ -1,4 +1,4 @@
-import { v4 } from 'uuid'
+import {v4} from 'uuid'
 
 export default [
     {
@@ -8,16 +8,12 @@ export default [
     },
     {
         page: "Планирование",
-        to: "/planning",
+        to: "/planing",
         id: `${v4()}`
     },
-        {
+    {
         page: "Награды",
-            to: "/awards",
-        id: `${v4()}`
-    },    {
-        page: "Контакты",
-        to: "/contacts",
+        to: "/awards",
         id: `${v4()}`
     }
 ]

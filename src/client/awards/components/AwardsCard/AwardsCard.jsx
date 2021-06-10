@@ -15,7 +15,7 @@ const AwardsCard = () => {
     };
 
     const awards = useSelector(state => getAwards(state), shallowEqual);
-
+    console.log(awards)
     const awardsList = awards.map(({ id, title, price, imageUrl }) =>
         <li key={id} className={styles.item}>
             <img src={imageUrl} alt={title} className={styles.image}/>

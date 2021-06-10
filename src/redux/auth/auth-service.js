@@ -17,6 +17,14 @@ class AuthService extends BaseHttpService {
     } catch (error) {
     }
   };
+
+  async getUser () {
+    try {
+      const data = await this.get('user/info');
+      return data;
+    } catch (error) {
+    }
+  };
 }
 
 export default AuthService

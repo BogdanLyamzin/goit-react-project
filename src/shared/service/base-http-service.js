@@ -60,9 +60,9 @@ class BaseHttpService {
             }
         }
     }
-    // get accessToken() {
-    //     return (this.accessToken || this.loadToken())
-    // }
+    getToken() {
+        return (this.accessToken || this.loadToken())
+    }
 
     saveToken(token) {
         this.accessToken = token;

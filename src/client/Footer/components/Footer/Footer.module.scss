@@ -1,10 +1,15 @@
-@import "../../../../shared/styles/base";
+@import "src/shared/styles/base";
+
+.footer {
+
+}
 
 @include mobile {
   .footerWrapper {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    padding-right: 41px;
   }
 
   .text {
@@ -20,7 +25,6 @@
 
 .footerLogo {
   margin-left: 4px;
-  vertical-align: middle;
 }
 
 .logo {
